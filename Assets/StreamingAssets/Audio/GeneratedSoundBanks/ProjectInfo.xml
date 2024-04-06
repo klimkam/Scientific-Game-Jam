@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="Scientific-Game-Jam_WwiseProject" GUID="{115E68C8-278D-438D-8766-ABB82EDB6878}" Generator="2023.1.0.8367"/>
+	<CacheRoot>../../../../Scientific-Game-Jam_WwiseProject/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Mac" GUID="{D7E4C8DD-428F-4028-BCFC-EBEC21365B2B}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="../../../../Scientific-Game-Jam_WwiseProject/GeneratedSoundBanks/Mac"/>
+		<Platform Name="Windows" GUID="{FFFDF93A-2932-4B76-8E87-0FEAE1892ACD}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../Scientific-Game-Jam_WwiseProject/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{3815E8D0-4F44-4A6B-9CF5-9AED1368B996}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{D995C0AF-3EE0-1BCD-11CC-52B00FB22E57}</FileHash>
+</ProjectInfo>

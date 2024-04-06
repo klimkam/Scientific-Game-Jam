@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1490295179	AkE_TestEvent			\Default Work Unit\AkE_TestEvent	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	614078952	TEST_Audio	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\TEST_Audio_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\TEST_Audio		155744
+
