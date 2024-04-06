@@ -5,6 +5,8 @@
 			<ChildrenList>
 				<ActorMixer Name="SFX" ID="{3066F186-8258-49E6-83D8-B51AE9B2DCDF}" ShortID="350329754">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="24"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-5</Value>
@@ -16,11 +18,15 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+							<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="TEST_Audio" ID="{C131778D-8A17-4B0A-9226-DD0BE1079744}" ShortID="346269502">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="27"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
@@ -42,7 +48,413 @@
 								<ActiveSource Name="TEST_Audio" ID="{BB6BF688-07B6-4057-8746-F2886076752B}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<ActorMixer Name="AMB" ID="{17E45EA8-C65F-472A-8834-CA32C4E8D66B}" ShortID="201784864">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="26"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
+						<ActorMixer Name="OBJECTS" ID="{8DB66731-DD45-4D2D-982D-99918853C6E7}" ShortID="269338161">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<Custom>
+										<Attenuation Name="Attenuation (Custom)" ID="{A14E79E7-B30F-412C-B791-0BCF24168C05}" ShortID="394679344">
+											<CurveUsageInfoList>
+												<VolumeDryUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+														<Curve Name="VolumeDry" ID="{B15550BB-5C5C-4DC1-A67B-5963641EAF0A}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>100</XPos>
+																	<YPos>-200</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</VolumeDryUsage>
+												<VolumeWetGameUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetGameUsage>
+												<VolumeWetUserUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetUserUsage>
+												<LowPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</LowPassFilterUsage>
+												<HighPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</HighPassFilterUsage>
+												<SpreadUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</SpreadUsage>
+												<FocusUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</FocusUsage>
+												<ObstructionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionVolumeUsage>
+												<ObstructionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionLPFUsage>
+												<ObstructionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionHPFUsage>
+												<OcclusionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionVolumeUsage>
+												<OcclusionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionLPFUsage>
+												<OcclusionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionHPFUsage>
+												<DiffractionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionVolumeUsage>
+												<DiffractionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionLPFUsage>
+												<DiffractionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionHPFUsage>
+												<TransmissionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionVolumeUsage>
+												<TransmissionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionLPFUsage>
+												<TransmissionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionHPFUsage>
+											</CurveUsageInfoList>
+										</Attenuation>
+									</Custom>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SX_RadarBeep" ID="{FB748B7A-4917-4725-885F-CFA8D651460E}" ShortID="1034958512">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SX_RadarBeep" ID="{11892A58-4ED0-4EED-8ED0-0E666932B25B}">
+											<Language>SFX</Language>
+											<AudioFile>SX_RadarBeep.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="763827261"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SX_RadarBeep" ID="{11892A58-4ED0-4EED-8ED0-0E666932B25B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SX_RadarBeepMONO" ID="{BD18053E-91F3-4AC6-ABC0-B6E0F4C8564C}" ShortID="475031084">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SX_RadarBeepMONO" ID="{CE1A9C45-352A-400A-A01A-04A921E147C0}">
+											<Language>SFX</Language>
+											<AudioFile>SX_RadarBeepMONO.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="317261131"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SX_RadarBeepMONO" ID="{CE1A9C45-352A-400A-A01A-04A921E147C0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="UI+UX" ID="{55FAA732-9BDA-4AAF-B6DA-2276690A374D}" ShortID="229789445">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
+						<ActorMixer Name="PLAYER" ID="{E32D1DF1-C1BE-4D56-924B-D58F7EEE89FA}" ShortID="196768957">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Color" Type="int16" Value="23"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<BlendContainer Name="SX_GliderLoop" ID="{1B4B9E36-D357-4A4D-8835-F15EF92D867E}" ShortID="567669162">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SX_GliderJet(WITHOUTCOMP)" ID="{0F462FD9-2040-4352-80CF-3A2F3809CB6D}" ShortID="1044031615">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{DEE433D3-BCAB-47A4-8714-DCD98D1759DB}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SX_GliderJet(WITHOUTCOMP)" ID="{8D47BFA5-721C-4E1E-9896-A185872E4765}">
+													<Language>SFX</Language>
+													<AudioFile>SX_GliderJet(WITHOUTCOMP).wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="814843894"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SX_GliderJet(WITHOUTCOMP)" ID="{8D47BFA5-721C-4E1E-9896-A185872E4765}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SX_GliderJet(Bubbles)" ID="{836439B0-BB24-45BE-972D-A9947B1BE695}" ShortID="798701325">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SX_GliderJet(Bubbles)" ID="{F8A61977-682C-4D6E-B058-8B52BE2D8B85}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>SX_GliderJet(Bubbles).wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="545753517"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SX_GliderJet(Bubbles)" ID="{F8A61977-682C-4D6E-B058-8B52BE2D8B85}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SX_GliderJet(Jet)" ID="{614295A3-8319-4F8E-8FE5-229288E3EE75}" ShortID="532895792">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SX_GliderJet(Jet)" ID="{A510FFD5-BC90-4796-95D4-476FAD309BF0}">
+													<Language>SFX</Language>
+													<AudioFile>SX_GliderJet(Jet).wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="688291734"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SX_GliderJet(Jet)" ID="{A510FFD5-BC90-4796-95D4-476FAD309BF0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{54D7E793-2414-4335-9DD0-A66EBEC71271}" ShortID="948476810">
+												<ReferenceList>
+													<Reference Name="Effect">
+														<Custom>
+															<Effect Name="Pitch Shifter (Custom)" ID="{79341222-0366-401B-BDAD-CA6F022B8B6A}" ShortID="858666023" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+																<ObjectLists>
+																	<ObjectList Name="RTPC">
+																		<Reference>
+																			<Local>
+																				<RTPC Name="" ID="{7BAE4201-2EE4-48F3-AC22-6FA397836E85}" ShortID="434952873">
+																					<PropertyList>
+																						<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																					</PropertyList>
+																					<ReferenceList>
+																						<Reference Name="ControlInput">
+																							<ObjectRef Name="PlayerSpeed" ID="{5DC57067-E34F-41B9-BE04-5D923CC677C6}" WorkUnitID="{F54A8AF3-C696-4D61-B966-006C423561FC}"/>
+																						</Reference>
+																						<Reference Name="Curve">
+																							<Custom>
+																								<Curve Name="" ID="{A099F76E-0ACC-482F-B75B-19B18A68BF38}">
+																									<PropertyList>
+																										<Property Name="Flags" Type="int32" Value="1"/>
+																									</PropertyList>
+																									<PointList>
+																										<Point>
+																											<XPos>0</XPos>
+																											<YPos>-219.42858</YPos>
+																											<Flags>5</Flags>
+																											<SegmentShape>Log1</SegmentShape>
+																										</Point>
+																										<Point>
+																											<XPos>19.54674</XPos>
+																											<YPos>301.71429</YPos>
+																											<Flags>0</Flags>
+																											<SegmentShape>SCurve</SegmentShape>
+																										</Point>
+																										<Point>
+																											<XPos>50.2832861189802</XPos>
+																											<YPos>0</YPos>
+																											<Flags>0</Flags>
+																										</Point>
+																										<Point>
+																											<XPos>100</XPos>
+																											<YPos>0</YPos>
+																											<Flags>37</Flags>
+																										</Point>
+																									</PointList>
+																								</Curve>
+																							</Custom>
+																						</Reference>
+																					</ReferenceList>
+																				</RTPC>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</Effect>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</ActorMixer>
+						<ActorMixer Name="ENEMIES" ID="{47F377C2-F2FA-498C-9466-292AC81A4213}" ShortID="601241319">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{6A75589C-08F8-4A63-A460-A6E5246B2F4C}" ShortID="679641261"/>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
