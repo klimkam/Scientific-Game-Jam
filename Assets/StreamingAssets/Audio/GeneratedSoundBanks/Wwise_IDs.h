@@ -13,8 +13,18 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AKE_ENEMYATTACK = 2621440863U;
+        static const AkUniqueID AKE_ENEMYGROWL = 690181958U;
+        static const AkUniqueID AKE_PLAYERMOVE = 573290449U;
+        static const AkUniqueID AKE_PLAYERSTOP = 3494097962U;
+        static const AkUniqueID AKE_SCANNERBEEP = 2089142865U;
         static const AkUniqueID AKE_TESTEVENT = 1490295179U;
     } // namespace EVENTS
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID PLAYERSPEED = 1493153371U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
@@ -25,7 +35,13 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID AUXVERB = 327594346U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

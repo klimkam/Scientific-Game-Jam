@@ -9,6 +9,17 @@
 							<ObjectRef Name="System" ID="{45A2624F-1BC2-437D-A32B-971650BE4BCC}" WorkUnitID="{094FD4E7-003A-4607-B54A-1F4F95B1698B}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="24"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<AuxBus Name="AuxVerb" ID="{AABD9E38-B3ED-4058-B3F8-7E256BEE8CB6}"/>
+							</ChildrenList>
+						</Bus>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>
