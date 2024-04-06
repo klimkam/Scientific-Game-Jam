@@ -27,7 +27,7 @@ sealed class MIDIDeviceManager : MonoBehaviour
     private int count;
     private float movingAverage;
     private bool hasDevice = false;
-    private bool activeNote = false;
+    // private bool activeNote = false;
 
     MIDIAverageEvent m_MIDIAverageEvent;
 
@@ -52,7 +52,7 @@ sealed class MIDIDeviceManager : MonoBehaviour
                 // number, channel number, device name, etc.) Use the velocity
                 // argument as an input note velocity.
                 noteValue = note.noteNumber;
-                activeNote = true;
+                // activeNote = true;
                 // Debug.Log(string.Format(
                 //     "Note On #{0} ({1}) vel:{2:0.00} ch:{3} dev:'{4}'",
                 //     note.noteNumber,
