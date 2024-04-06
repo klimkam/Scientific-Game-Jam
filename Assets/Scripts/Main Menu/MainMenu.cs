@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Bootstrap : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
-    private void Awake()
+    public void Awake()
     {
         Cursor.visible = false;
-        SceneManager.LoadScene("Main Menu");
+    }
+
+    public void LoadTheGame() {
+        SceneManager.LoadScene("Game");
     }
 }
