@@ -35,6 +35,7 @@
 								<Action Name="" ID="{84FE5BA5-F24D-4F7A-87E1-FE1B30B321A4}" ShortID="669965662">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
 										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 									</PropertyList>
 									<ReferenceList>
@@ -71,7 +72,17 @@
 				<Folder Name="UI+UX" ID="{C41209AC-8EFF-442E-A704-2D49F612CB15}" ShortID="989070044">
 					<ChildrenList>
 						<Event Name="Game_Start" ID="{C89476C2-BE22-487A-A0BB-C51236A0F967}"/>
-						<Event Name="Play_AMB" ID="{47136A0C-A7E5-4791-8861-9E099057B178}"/>
+						<Event Name="Play_AMB" ID="{47136A0C-A7E5-4791-8861-9E099057B178}">
+							<ChildrenList>
+								<Action Name="" ID="{6973B853-44E9-4C00-A3CE-2D3443397A6C}" ShortID="481149878">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="OceanOtherStuff" ID="{20B59D3E-0D62-4988-8C19-7C73ED0F7B16}" WorkUnitID="{4FEA21A5-32A9-4280-AAEC-9F50BEEDD9D4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
