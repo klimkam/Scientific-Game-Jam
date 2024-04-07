@@ -1819,7 +1819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_minimalDepthLevel: 0
-  m_maxDepthLevel: 100
+  m_maxDepthLevel: 250
 --- !u!1 &368121413
 GameObject:
   m_ObjectHideFlags: 0
@@ -8452,7 +8452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335527633083179281, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 63
+      value: 265
       objectReference: {fileID: 0}
     - target: {fileID: 1335527633083179281, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8493,6 +8493,10 @@ PrefabInstance:
     - target: {fileID: 4950099533666045169, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6416788560146046575, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
+      propertyPath: m_positionOffsetData.positionOffset.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
