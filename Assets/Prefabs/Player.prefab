@@ -5179,7 +5179,6 @@ GameObject:
   - component: {fileID: 56495328551576713}
   - component: {fileID: 6167226125922299135}
   - component: {fileID: 3469800594627539616}
-  - component: {fileID: 6393590143632037856}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5289,29 +5288,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDefaultListener: 1
   listenerId: 0
---- !u!114 &6393590143632037856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8622002117961322117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c725fe963b534280bc779c2e7f23fb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mode: 0
-  _direction: {x: 0, y: 0, z: 1}
-  _origin: {x: 0, y: 0, z: 0}
-  _baseColor: {r: 0.2, g: 0.2, b: 0.2, a: 0}
-  _waveColor: {r: 0.19999999, g: 1, b: 0.5753977, a: 0}
-  _waveAmplitude: 1
-  _waveExponent: 20
-  _waveInterval: 1000
-  _waveSpeed: 100
-  _addColor: {r: 0, g: 0, b: 0, a: 1}
-  shader: {fileID: 4800000, guid: 6d12e7ab487bf49d18b89038af741a18, type: 3}
 --- !u!1001 &1080766529288192141
 PrefabInstance:
   m_ObjectHideFlags: 0
