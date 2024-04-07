@@ -103,6 +103,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="AMBDrone" ID="{CAFD322C-0942-4AB3-884E-742C61A981F2}" ShortID="829056762">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
 															<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
@@ -128,6 +131,9 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="SX_OceanAMBLayer2" ID="{2F927775-1748-419B-B022-472EE467D2B1}" ShortID="1052149959">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
 															<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
@@ -218,6 +224,257 @@
 															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
 														</Reference>
 													</ReferenceList>
+													<ChildrenList>
+														<RandomSequenceContainer Name="whines" ID="{D71747A8-AE0B-4565-9624-395AF8A665ED}" ShortID="1031609396">
+															<PropertyList>
+																<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+																<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+																<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+																<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2.5">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{83E5814C-4516-42DC-9000-4C55301C40D2}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="2"/>
+																					<Property Name="Min" Type="Real64" Value="-2"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+																<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-41</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="whines-001" ID="{502184DB-3ABE-42CF-AC53-573395D28291}" ShortID="193022628">
+																	<PropertyList>
+																		<Property Name="Inclusion" Type="bool">
+																			<ValueList>
+																				<Value>False</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="Volume" Type="Real64">
+																			<ValueList>
+																				<Value>11</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Attenuation">
+																			<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																		</Reference>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="whines-001" ID="{5CCD4BAA-A42E-49BB-84BC-054BC7E6C21D}">
+																			<Language>SFX</Language>
+																			<AudioFile>whines-001.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="886312119"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="whines-001" ID="{5CCD4BAA-A42E-49BB-84BC-054BC7E6C21D}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="whines-002" ID="{11AB1323-0646-4504-A731-ED804F83547C}" ShortID="501829564">
+																	<ReferenceList>
+																		<Reference Name="Attenuation">
+																			<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																		</Reference>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="whines-002" ID="{88DD9E15-FCD0-4BED-9D4C-DF3B54170A47}">
+																			<Language>SFX</Language>
+																			<AudioFile>whines-002.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="904649367"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="whines-002" ID="{88DD9E15-FCD0-4BED-9D4C-DF3B54170A47}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="whines-003" ID="{58D392DB-9076-4344-A095-4C6222AE1D57}" ShortID="614425337">
+																	<ReferenceList>
+																		<Reference Name="Attenuation">
+																			<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																		</Reference>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="whines-003" ID="{9300FF02-D2E4-4233-B90D-BCC02BFB6588}">
+																			<Language>SFX</Language>
+																			<AudioFile>whines-003.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="699471146"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="whines-003" ID="{9300FF02-D2E4-4233-B90D-BCC02BFB6588}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="whines-004" ID="{BE87C446-F557-4E88-9F6F-D513FFB4C8A6}" ShortID="583099771">
+																	<ReferenceList>
+																		<Reference Name="Attenuation">
+																			<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																		</Reference>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="whines-004" ID="{2AABC054-19A8-4FC0-B523-0E0747FBC10A}">
+																			<Language>SFX</Language>
+																			<AudioFile>whines-004.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="407555346"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="whines-004" ID="{2AABC054-19A8-4FC0-B523-0E0747FBC10A}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="whines-005" ID="{38408482-ABBD-4955-806A-B151DD12EF09}" ShortID="4709981">
+																	<ReferenceList>
+																		<Reference Name="Attenuation">
+																			<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																		</Reference>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="whines-005" ID="{DA73D651-AA95-42C7-BB84-5568FA3F5227}">
+																			<Language>SFX</Language>
+																			<AudioFile>whines-005.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="941138989"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="whines-005" ID="{DA73D651-AA95-42C7-BB84-5568FA3F5227}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="whines-006" ID="{1036E633-B4E5-40B0-BD22-301E729025AF}" ShortID="719372728">
+																	<ReferenceList>
+																		<Reference Name="Attenuation">
+																			<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																		</Reference>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="whines-006" ID="{494097D5-13B1-4188-A92F-14FCC5F615E1}">
+																			<Language>SFX</Language>
+																			<AudioFile>whines-006.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="553477779"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="whines-006" ID="{494097D5-13B1-4188-A92F-14FCC5F615E1}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="whines-007" ID="{AA16EB16-48F5-44A4-99A9-8C6BF6CB5729}" ShortID="814595593">
+																	<ReferenceList>
+																		<Reference Name="Attenuation">
+																			<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																		</Reference>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="whines-007" ID="{4BC56EB2-0FAA-4322-BDDE-42DEC910A0D6}">
+																			<Language>SFX</Language>
+																			<AudioFile>whines-007.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="892235032"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="whines-007" ID="{4BC56EB2-0FAA-4322-BDDE-42DEC910A0D6}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="whines-008" ID="{40E983EE-5186-443D-A44E-4620E928A1C0}" ShortID="1042879896">
+																	<ReferenceList>
+																		<Reference Name="Attenuation">
+																			<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																		</Reference>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="whines-008" ID="{F4B43215-37CA-4444-9D3E-79F23BA554A7}">
+																			<Language>SFX</Language>
+																			<AudioFile>whines-008.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="978189950"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="whines-008" ID="{F4B43215-37CA-4444-9D3E-79F23BA554A7}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</RandomSequenceContainer>
+													</ChildrenList>
 												</BlendContainer>
 												<BlendContainer Name="Level3" ID="{B79880A2-7593-46E8-8AE2-2A892326CA0E}" ShortID="569246327">
 													<ReferenceList>
@@ -2770,6 +3027,31 @@
 										</BlendContainer>
 									</ChildrenList>
 								</BlendContainer>
+								<Sound Name="HildieMusicLoop" ID="{00AA55BA-048A-43BF-BA83-2BBC9DA63B3C}" ShortID="642525689">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HildieMusicLoop" ID="{2301EA05-B011-4C50-9741-702FB0A23953}">
+											<Language>SFX</Language>
+											<AudioFile>HildieMusicLoop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="676524955"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HildieMusicLoop" ID="{2301EA05-B011-4C50-9741-702FB0A23953}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="OBJECTS" ID="{8DB66731-DD45-4D2D-982D-99918853C6E7}" ShortID="269338161">
@@ -2909,11 +3191,17 @@
 										<ActiveSource Name="SX_RadarBeep" ID="{11892A58-4ED0-4EED-8ED0-0E666932B25B}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="SX_RadarBeepMONO" ID="{BD18053E-91F3-4AC6-ABC0-B6E0F4C8564C}" ShortID="475031084">
+								<RandomSequenceContainer Name="Loop" ID="{36EDDF2D-6A87-46C0-9B86-C20F030B3AB0}" ShortID="68586550">
 									<PropertyList>
-										<Property Name="UserAuxSendVolume0" Type="Real64">
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="5"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>3</Value>
+												<Value>-18</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2924,23 +3212,135 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
 										</Reference>
-										<Reference Name="UserAuxSend0">
-											<ObjectRef Name="AuxVerb" ID="{AABD9E38-B3ED-4058-B3F8-7E256BEE8CB6}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
-										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="SX_RadarBeepMONO" ID="{CE1A9C45-352A-400A-A01A-04A921E147C0}">
-											<Language>SFX</Language>
-											<AudioFile>SX_RadarBeepMONO.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="317261131"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<Sound Name="SX_RadarBeepMONO" ID="{BD18053E-91F3-4AC6-ABC0-B6E0F4C8564C}" ShortID="475031084">
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<Custom CreatedFrom="{2F186679-CBF3-4563-BEE6-F5B48A64A600}">
+														<Attenuation Name="ObjectAttenuation (Custom)" ID="{7919C9C8-DC9D-4BFD-9A18-E9B9F8D3D3FE}" ShortID="970482354">
+															<PropertyList>
+																<Property Name="RadiusMax" Type="Real64" Value="30"/>
+															</PropertyList>
+															<CurveUsageInfoList>
+																<VolumeDryUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																		<Curve Name="VolumeDry" ID="{8D530E71-4A9D-4A6D-BAA6-725F254BBB30}">
+																			<PropertyList>
+																				<Property Name="Flags" Type="int32" Value="3"/>
+																			</PropertyList>
+																			<PointList>
+																				<Point>
+																					<XPos>0</XPos>
+																					<YPos>0</YPos>
+																					<Flags>5</Flags>
+																					<SegmentShape>Exp3</SegmentShape>
+																				</Point>
+																				<Point>
+																					<XPos>4.30605</XPos>
+																					<YPos>-1.41845</YPos>
+																					<Flags>0</Flags>
+																					<SegmentShape>SCurve</SegmentShape>
+																				</Point>
+																				<Point>
+																					<XPos>30</XPos>
+																					<YPos>-200</YPos>
+																					<Flags>37</Flags>
+																				</Point>
+																			</PointList>
+																		</Curve>
+																	</CurveUsageInfo>
+																</VolumeDryUsage>
+																<VolumeWetGameUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																</VolumeWetGameUsage>
+																<VolumeWetUserUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																</VolumeWetUserUsage>
+																<LowPassFilterUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</LowPassFilterUsage>
+																<HighPassFilterUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</HighPassFilterUsage>
+																<SpreadUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</SpreadUsage>
+																<FocusUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</FocusUsage>
+																<ObstructionVolumeUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</ObstructionVolumeUsage>
+																<ObstructionLPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</ObstructionLPFUsage>
+																<ObstructionHPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</ObstructionHPFUsage>
+																<OcclusionVolumeUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</OcclusionVolumeUsage>
+																<OcclusionLPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</OcclusionLPFUsage>
+																<OcclusionHPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</OcclusionHPFUsage>
+																<DiffractionVolumeUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</DiffractionVolumeUsage>
+																<DiffractionLPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</DiffractionLPFUsage>
+																<DiffractionHPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</DiffractionHPFUsage>
+																<TransmissionVolumeUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</TransmissionVolumeUsage>
+																<TransmissionLPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</TransmissionLPFUsage>
+																<TransmissionHPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</TransmissionHPFUsage>
+															</CurveUsageInfoList>
+														</Attenuation>
+													</Custom>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="AuxVerb" ID="{AABD9E38-B3ED-4058-B3F8-7E256BEE8CB6}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SX_RadarBeepMONO" ID="{CE1A9C45-352A-400A-A01A-04A921E147C0}">
+													<Language>SFX</Language>
+													<AudioFile>SX_RadarBeepMONO.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="317261131"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SX_RadarBeepMONO" ID="{CE1A9C45-352A-400A-A01A-04A921E147C0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SX_RadarBeepMONO" ID="{CE1A9C45-352A-400A-A01A-04A921E147C0}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="SX_RadarBeepMONO" ID="{BD18053E-91F3-4AC6-ABC0-B6E0F4C8564C}" WorkUnitID="{4FEA21A5-32A9-4280-AAEC-9F50BEEDD9D4}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="UI+UX" ID="{55FAA732-9BDA-4AAF-B6DA-2276690A374D}" ShortID="229789445">
