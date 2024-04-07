@@ -14,6 +14,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
 						</Reference>
@@ -62,7 +65,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<BlendContainer Name="OceanAmb" ID="{20B59D3E-0D62-4988-8C19-7C73ED0F7B16}" ShortID="985547203">
+								<BlendContainer Name="OceanAMB" ID="{4030A87F-1E93-4780-9140-9808852D686A}" ShortID="95589017">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
@@ -72,28 +75,18 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<BlendContainer Name="Level1" ID="{346B4BC7-1247-4E83-A384-344711B8CFC7}" ShortID="381485272">
+										<BlendContainer Name="OceanDrone" ID="{F2F77BAC-E04D-469D-AAEC-AD268A702F4F}" ShortID="663611524">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
 												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
-												</Reference>
-											</ReferenceList>
-										</BlendContainer>
-										<BlendContainer Name="Level2" ID="{7EF7459D-09DB-4074-B3E3-F05B67F81432}" ShortID="545660600">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
-												</Reference>
-											</ReferenceList>
-										</BlendContainer>
-										<BlendContainer Name="Level3" ID="{B79880A2-7593-46E8-8AE2-2A892326CA0E}" ShortID="569246327">
-											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
 												</Reference>
@@ -102,118 +95,10 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<RandomSequenceContainer Name="Growls" ID="{3216DA96-56E7-4E32-8EE7-1ED14C3FCE73}" ShortID="610952944">
-													<PropertyList>
-														<Property Name="3DPosition" Type="int16" Value="2"/>
-														<Property Name="3DSpatialization" Type="int16" Value="2"/>
-														<Property Name="Lowpass" Type="int16">
-															<ValueList>
-																<Value>11</Value>
-															</ValueList>
-														</Property>
-														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-														<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-														<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-														<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="5">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{585454D5-9302-4536-BE1F-34D6EBC35C5A}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Max" Type="Real64" Value="3"/>
-																			<Property Name="Min" Type="Real64" Value="-2"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-														<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
-													</PropertyList>
+												<Sound Name="AMBDrone" ID="{CAFD322C-0942-4AB3-884E-742C61A981F2}" ShortID="829056762">
 													<ReferenceList>
 														<Reference Name="Attenuation">
-															<Custom>
-																<Attenuation Name="Attenuation (Custom)" ID="{B897B14F-1485-4160-BCF4-CDCF922D82F2}" ShortID="365321611">
-																	<CurveUsageInfoList>
-																		<VolumeDryUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																				<Curve Name="VolumeDry" ID="{D1BEA929-AA9B-42F5-B970-2D48022540BA}">
-																					<PropertyList>
-																						<Property Name="Flags" Type="int32" Value="3"/>
-																					</PropertyList>
-																					<PointList>
-																						<Point>
-																							<XPos>0</XPos>
-																							<YPos>0</YPos>
-																							<Flags>5</Flags>
-																						</Point>
-																						<Point>
-																							<XPos>100</XPos>
-																							<YPos>-200</YPos>
-																							<Flags>37</Flags>
-																						</Point>
-																					</PointList>
-																				</Curve>
-																			</CurveUsageInfo>
-																		</VolumeDryUsage>
-																		<VolumeWetGameUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-																		</VolumeWetGameUsage>
-																		<VolumeWetUserUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-																		</VolumeWetUserUsage>
-																		<LowPassFilterUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-																		</LowPassFilterUsage>
-																		<HighPassFilterUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-																		</HighPassFilterUsage>
-																		<SpreadUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-																		</SpreadUsage>
-																		<FocusUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-																		</FocusUsage>
-																		<ObstructionVolumeUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-																		</ObstructionVolumeUsage>
-																		<ObstructionLPFUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-																		</ObstructionLPFUsage>
-																		<ObstructionHPFUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-																		</ObstructionHPFUsage>
-																		<OcclusionVolumeUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-																		</OcclusionVolumeUsage>
-																		<OcclusionLPFUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-																		</OcclusionLPFUsage>
-																		<OcclusionHPFUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-																		</OcclusionHPFUsage>
-																		<DiffractionVolumeUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-																		</DiffractionVolumeUsage>
-																		<DiffractionLPFUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-																		</DiffractionLPFUsage>
-																		<DiffractionHPFUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-																		</DiffractionHPFUsage>
-																		<TransmissionVolumeUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-																		</TransmissionVolumeUsage>
-																		<TransmissionLPFUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-																		</TransmissionLPFUsage>
-																		<TransmissionHPFUsage>
-																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-																		</TransmissionHPFUsage>
-																	</CurveUsageInfoList>
-																</Attenuation>
-															</Custom>
+															<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
 														</Reference>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
@@ -223,556 +108,2660 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<Sound Name="SX_LOWGROWLAMB-001" ID="{B862A523-B5DE-431A-B098-6CCCE64C74FE}" ShortID="270257325">
-															<PropertyList>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>12</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="SX_LOWGROWLAMB-001" ID="{CB13F2F7-C3EB-4E6B-9CB9-A7239FB84F1A}">
-																	<PropertyList>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="6.55102040816326"/>
-																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="2.18367346938776"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="24.4571428571428"/>
-																	</PropertyList>
-																	<Language>SFX</Language>
-																	<AudioFile>SX_LOWGROWLAMB-001.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="157989543"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="SX_LOWGROWLAMB-001" ID="{CB13F2F7-C3EB-4E6B-9CB9-A7239FB84F1A}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="SX_LOWGROWLAMB-002" ID="{85BE0B7C-255C-4639-A666-E44BA0AFA760}" ShortID="595197967">
-															<PropertyList>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>12</Value>
-																	</ValueList>
-																</Property>
-																<Property Name="Weight" Type="Real64">
-																	<ValueList>
-																		<Value>67</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="SX_LOWGROWLAMB-002" ID="{B8149700-6E06-41AD-B1EB-CA1344AF61EA}">
-																	<PropertyList>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="6.51428571428571"/>
-																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="6.51428571428571"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="30.3999999999999"/>
-																	</PropertyList>
-																	<Language>SFX</Language>
-																	<AudioFile>SX_LOWGROWLAMB-002.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="564187307"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="SX_LOWGROWLAMB-002" ID="{B8149700-6E06-41AD-B1EB-CA1344AF61EA}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="SX_LOWGROWLAMB-003" ID="{914C735E-2998-48D8-A01B-31C8C9AEAF32}" ShortID="401620470">
-															<PropertyList>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>12</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="SX_LOWGROWLAMB-003" ID="{0E4849C4-31BD-4E36-B930-A952187D7053}">
-																	<PropertyList>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="7.56326530612245"/>
-																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="4.00408163265306"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="29.3632653061224"/>
-																	</PropertyList>
-																	<Language>SFX</Language>
-																	<AudioFile>SX_LOWGROWLAMB-003.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="881706534"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="SX_LOWGROWLAMB-003" ID="{0E4849C4-31BD-4E36-B930-A952187D7053}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="SX_LOWGROWLAMB-004" ID="{EF9CF1C4-C227-41F5-B11C-05192A1738D7}" ShortID="57206366">
-															<PropertyList>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>12</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="SX_LOWGROWLAMB-004" ID="{F9D49F64-CE66-4201-B6FB-0B27F4C26FAA}">
-																	<PropertyList>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="8.87755102040817"/>
-																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="23.0816326530612"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="57.9999999999999"/>
-																	</PropertyList>
-																	<Language>SFX</Language>
-																	<AudioFile>SX_LOWGROWLAMB-004.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="747402839"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="SX_LOWGROWLAMB-004" ID="{F9D49F64-CE66-4201-B6FB-0B27F4C26FAA}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="SX_LOWGROWLAMB-005" ID="{2CFF944F-3DE6-4197-90AE-388D5428E5C7}" ShortID="714392431">
-															<PropertyList>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>12</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="SX_LOWGROWLAMB-005" ID="{AC905990-61E9-424B-A07B-68983EB0393D}">
-																	<PropertyList>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="15.1714285714286"/>
-																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="13.7265306122449"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="50.5714285714286"/>
-																	</PropertyList>
-																	<Language>SFX</Language>
-																	<AudioFile>SX_LOWGROWLAMB-005.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="181900161"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="SX_LOWGROWLAMB-005" ID="{AC905990-61E9-424B-A07B-68983EB0393D}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="SX_LOWGROWLAMB-006" ID="{7C97259D-4D2D-49F6-8327-127DD2C2E8DD}" ShortID="540073468">
-															<PropertyList>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>12</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="SX_LOWGROWLAMB-006" ID="{536AE2C2-2AC5-4D6D-9044-8FE4AA139416}">
-																	<PropertyList>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="5.26530612244898"/>
-																		<Property Name="LoopBegin" Type="Real64" Value="6.31836734693877"/>
-																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="5.79183673469387"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="29.4857142857143"/>
-																	</PropertyList>
-																	<Language>SFX</Language>
-																	<AudioFile>SX_LOWGROWLAMB-006.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="670247480"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="SX_LOWGROWLAMB-006" ID="{536AE2C2-2AC5-4D6D-9044-8FE4AA139416}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="SX_LOWGROWLAMB-007" ID="{0A076DBF-E73A-4298-BEDB-7E13D4374581}" ShortID="1032244597">
-															<PropertyList>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>12</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="SX_LOWGROWLAMB-007" ID="{1F42D679-EA05-4CD1-BD02-DBC152B42118}">
-																	<PropertyList>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="11.8367346938776"/>
-																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="14.7959183673469"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="49.7142857142857"/>
-																	</PropertyList>
-																	<Language>SFX</Language>
-																	<AudioFile>SX_LOWGROWLAMB-007.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="913779242"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="SX_LOWGROWLAMB-007" ID="{1F42D679-EA05-4CD1-BD02-DBC152B42118}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="SX_LOWGROWLAMB-008" ID="{BE9D991D-81FF-490D-9E33-797952E6A6CF}" ShortID="446182533">
-															<PropertyList>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>12</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="SX_LOWGROWLAMB-008" ID="{94C3C5BD-95D1-481C-8495-C007730EDB32}">
-																	<PropertyList>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="8.28571428571428"/>
-																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="33.2827148150326"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="62.1428571428571"/>
-																	</PropertyList>
-																	<Language>SFX</Language>
-																	<AudioFile>SX_LOWGROWLAMB-008.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="131477098"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="SX_LOWGROWLAMB-008" ID="{94C3C5BD-95D1-481C-8495-C007730EDB32}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="SX_LOWGROWLAMB-009" ID="{ECCA7A0C-4967-4F94-8C09-73CDB640D3EC}" ShortID="883079174">
-															<PropertyList>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>12</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="SX_LOWGROWLAMB-009" ID="{44D01500-A2CE-4544-A04C-CF3730786008}">
-																	<PropertyList>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="10.530612244898"/>
-																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="15.7959183673469"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="51.6"/>
-																	</PropertyList>
-																	<Language>SFX</Language>
-																	<AudioFile>SX_LOWGROWLAMB-009.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="526258960"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="SX_LOWGROWLAMB-009" ID="{44D01500-A2CE-4544-A04C-CF3730786008}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="SX_LOWGROWLAMB-010" ID="{41CD4E93-B04B-4B5D-90DB-4E25AEE1F972}" ShortID="308032366">
-															<PropertyList>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>12</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="SX_LOWGROWLAMB-010" ID="{B01C01AC-59A3-4B09-B0A2-B9FB8825F0EB}">
-																	<PropertyList>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="7.91028941644685"/>
-																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="53.933791475774"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="91.3278868989773"/>
-																	</PropertyList>
-																	<Language>SFX</Language>
-																	<AudioFile>SX_LOWGROWLAMB-010.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="1060915629"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="SX_LOWGROWLAMB-010" ID="{B01C01AC-59A3-4B09-B0A2-B9FB8825F0EB}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
+														<AudioFileSource Name="AMBDrone" ID="{69AB8D25-ABBC-41B6-9B3B-D19A430BBE69}">
+															<Language>SFX</Language>
+															<AudioFile>AMBDrone.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="5060706"/>
+															</MediaIDList>
+														</AudioFileSource>
 													</ChildrenList>
-													<PositioningInfo>
-														<Position Name="" ID="{A4DC9554-A5E2-462D-9856-48D95766EC45}">
-															<PropertyList>
-																<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
-																<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
-															</PropertyList>
-															<ChildrenList>
-																<Path2D Name="Growls_Path" ID="{9EC7EE31-4CBD-4ECD-856A-20B15FD8B714}">
-																	<PointList>
-																		<Point>
-																			<XPos>-58.94737</XPos>
-																			<YPos>64.71103</YPos>
-																			<Flags>12</Flags>
-																			<Time>0</Time>
-																		</Point>
-																		<Point>
-																			<XPos>42.10526</XPos>
-																			<YPos>40.45534</YPos>
-																			<Flags>0</Flags>
-																			<Time>2500</Time>
-																		</Point>
-																		<Point>
-																			<XPos>68.4210526315789</XPos>
-																			<YPos>-25.0437828371278</YPos>
-																			<Flags>0</Flags>
-																			<Time>5000</Time>
-																		</Point>
-																	</PointList>
-																</Path2D>
-																<Path2D Name="Growls_Path_01" ID="{5139FCCC-7E16-4E50-92C0-3F64E434D2DD}">
-																	<PointList>
-																		<Point>
-																			<XPos>-78.59649</XPos>
-																			<YPos>85.02627</YPos>
-																			<Flags>12</Flags>
-																			<Time>0</Time>
-																		</Point>
-																	</PointList>
-																</Path2D>
-																<Path2D Name="Growls_Path_02" ID="{6BDD0F1D-6ED5-4171-9E67-EBE6A74F9DCD}">
-																	<PointList>
-																		<Point>
-																			<XPos>87.01754</XPos>
-																			<YPos>81.17338</YPos>
-																			<Flags>12</Flags>
-																			<Time>0</Time>
-																		</Point>
-																	</PointList>
-																</Path2D>
-																<Path2D Name="Growls_Path_03" ID="{A4CCFF84-5AEF-4BB4-A9FF-1B5C0CCF4FC3}">
-																	<PointList>
-																		<Point>
-																			<XPos>-80</XPos>
-																			<YPos>-88.0035</YPos>
-																			<Flags>12</Flags>
-																			<Time>0</Time>
-																		</Point>
-																	</PointList>
-																</Path2D>
-																<Path2D Name="Growls_Path_04" ID="{47FD9AA2-2527-4CEA-8D2E-299C81C1FD3C}">
-																	<PointList>
-																		<Point>
-																			<XPos>76.49123</XPos>
-																			<YPos>-85.55166</YPos>
-																			<Flags>12</Flags>
-																			<Time>0</Time>
-																		</Point>
-																	</PointList>
-																</Path2D>
-																<Path2D Name="Growls_Path_05" ID="{39DC57A2-C79A-4E56-BFF0-CB5958350EB5}">
-																	<PointList>
-																		<Point>
-																			<XPos>-74.03508</XPos>
-																			<YPos>-82.3993</YPos>
-																			<Flags>12</Flags>
-																			<Time>0</Time>
-																		</Point>
-																		<Point>
-																			<XPos>51.57895</XPos>
-																			<YPos>-95.09632</YPos>
-																			<Flags>0</Flags>
-																			<Time>2500</Time>
-																		</Point>
-																		<Point>
-																			<XPos>85.26316</XPos>
-																			<YPos>-16.98774</YPos>
-																			<Flags>0</Flags>
-																			<Time>5000</Time>
-																		</Point>
-																	</PointList>
-																</Path2D>
-																<Path2D Name="Growls_Path_06" ID="{3E92901E-4E49-472F-B8DA-3F68AFFDB498}">
-																	<PointList>
-																		<Point>
-																			<XPos>-96.49123</XPos>
-																			<YPos>29.3345</YPos>
-																			<Flags>12</Flags>
-																			<Time>0</Time>
-																		</Point>
-																		<Point>
-																			<XPos>-73.68421</XPos>
-																			<YPos>84.23818</YPos>
-																			<Flags>0</Flags>
-																			<Time>5000</Time>
-																		</Point>
-																	</PointList>
-																</Path2D>
-																<Path2D Name="Growls_Path_07" ID="{4639C7E6-7FFA-4EF7-BF7E-EA82703483B4}">
-																	<PointList>
-																		<Point>
-																			<XPos>48.77193</XPos>
-																			<YPos>-96.76007</YPos>
-																			<Flags>12</Flags>
-																			<Time>0</Time>
-																		</Point>
-																		<Point>
-																			<XPos>87.01754</XPos>
-																			<YPos>-51.31349</YPos>
-																			<Flags>0</Flags>
-																			<Time>5000</Time>
-																		</Point>
-																	</PointList>
-																</Path2D>
-															</ChildrenList>
-														</Position>
-													</PositioningInfo>
-												</RandomSequenceContainer>
+													<ActiveSourceList>
+														<ActiveSource Name="AMBDrone" ID="{69AB8D25-ABBC-41B6-9B3B-D19A430BBE69}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SX_OceanAMBLayer2" ID="{2F927775-1748-419B-B022-472EE467D2B1}" ShortID="1052149959">
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SX_OceanAMBLayer2" ID="{3266D7F8-2BAD-4F77-B880-2778ACAAF4B2}">
+															<Language>SFX</Language>
+															<AudioFile>SX_OceanAMBLayer2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="459685041"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SX_OceanAMBLayer2" ID="{3266D7F8-2BAD-4F77-B880-2778ACAAF4B2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
+											<BlendTrackList>
+												<BlendTrack Name="New Blend Track" ID="{C11309D5-6C29-4E96-8B9E-8F0F00508409}" ShortID="267238837">
+													<PropertyList>
+														<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="LayerCrossFadeControlInput">
+															<ObjectRef Name="PlayerDepth" ID="{E2221916-5F0F-44EB-BDD7-B568226560C3}" WorkUnitID="{F54A8AF3-C696-4D61-B966-006C423561FC}"/>
+														</Reference>
+													</ReferenceList>
+													<BlendTrackAssocList>
+														<BlendTrackAssoc>
+															<ItemRef Name="SX_OceanAMBLayer2" ID="{2F927775-1748-419B-B022-472EE467D2B1}"/>
+															<CrossfadingInfo>
+																<LeftEdgePos>0</LeftEdgePos>
+																<LeftFadingMode>Automatic</LeftFadingMode>
+																<RightEdgePos>52.344</RightEdgePos>
+																<RightFadingMode>Automatic</RightFadingMode>
+															</CrossfadingInfo>
+														</BlendTrackAssoc>
+														<BlendTrackAssoc>
+															<ItemRef Name="AMBDrone" ID="{CAFD322C-0942-4AB3-884E-742C61A981F2}"/>
+															<CrossfadingInfo>
+																<LeftEdgePos>35.703375</LeftEdgePos>
+																<LeftFadingMode>Automatic</LeftFadingMode>
+																<RightEdgePos>100</RightEdgePos>
+																<RightFadingMode>Automatic</RightFadingMode>
+															</CrossfadingInfo>
+														</BlendTrackAssoc>
+													</BlendTrackAssocList>
+												</BlendTrack>
+											</BlendTrackList>
 										</BlendContainer>
-										<Sound Name="AMBDrone" ID="{CAFD322C-0942-4AB3-884E-742C61A981F2}" ShortID="829056762">
+										<BlendContainer Name="OceanOtherStuff" ID="{20B59D3E-0D62-4988-8C19-7C73ED0F7B16}" ShortID="985547203">
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+													<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="AMBDrone" ID="{69AB8D25-ABBC-41B6-9B3B-D19A430BBE69}">
-													<Language>SFX</Language>
-													<AudioFile>AMBDrone.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="5060706"/>
-													</MediaIDList>
-												</AudioFileSource>
+												<BlendContainer Name="Level1" ID="{346B4BC7-1247-4E83-A384-344711B8CFC7}" ShortID="381485272">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+														</Reference>
+													</ReferenceList>
+												</BlendContainer>
+												<BlendContainer Name="Level2" ID="{7EF7459D-09DB-4074-B3E3-F05B67F81432}" ShortID="545660600">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+														</Reference>
+													</ReferenceList>
+												</BlendContainer>
+												<BlendContainer Name="Level3" ID="{B79880A2-7593-46E8-8AE2-2A892326CA0E}" ShortID="569246327">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<RandomSequenceContainer Name="Stingers" ID="{3216DA96-56E7-4E32-8EE7-1ED14C3FCE73}" ShortID="610952944">
+															<PropertyList>
+																<Property Name="3DPosition" Type="int16" Value="1"/>
+																<Property Name="Lowpass" Type="int16">
+																	<ValueList>
+																		<Value>11</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+																<Property Name="OverridePositioning" Type="bool" Value="True"/>
+																<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+																<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+																<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{585454D5-9302-4536-BE1F-34D6EBC35C5A}">
+																				<PropertyList>
+																					<Property Name="Max" Type="Real64" Value="3"/>
+																					<Property Name="Min" Type="Real64" Value="-2"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+																<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+																<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Attenuation">
+																	<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																</Reference>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<RandomSequenceContainer Name="Growls" ID="{340D030E-8333-4F13-B2BD-50052676B8C4}" ShortID="264481655">
+																	<PropertyList>
+																		<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+																		<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+																		<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+																		<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+																		<Property Name="Volume" Type="Real64">
+																			<ValueList>
+																				<Value>-20</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<Sound Name="SX_LOWGROWLAMB-001" ID="{B862A523-B5DE-431A-B098-6CCCE64C74FE}" ShortID="270257325">
+																			<PropertyList>
+																				<Property Name="3DPosition" Type="int16" Value="1"/>
+																				<Property Name="Volume" Type="Real64">
+																					<ValueList>
+																						<Value>12</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="SX_LOWGROWLAMB-001" ID="{CB13F2F7-C3EB-4E6B-9CB9-A7239FB84F1A}">
+																					<PropertyList>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="6.55102040816326"/>
+																						<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																						<Property Name="TrimBegin" Type="Real64" Value="2.18367346938776"/>
+																						<Property Name="TrimEnd" Type="Real64" Value="24.4571428571428"/>
+																					</PropertyList>
+																					<Language>SFX</Language>
+																					<AudioFile>SX_LOWGROWLAMB-001.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="157989543"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<PositioningInfo>
+																				<Position Name="" ID="{332518BF-307E-470C-8286-091315C7F591}">
+																					<PropertyList>
+																						<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+																						<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+																					</PropertyList>
+																					<ChildrenList>
+																						<Path2D Name="Growls_Path" ID="{DD4774FB-D20F-432A-AE1C-63C8572BFEEF}">
+																							<PointList>
+																								<Point>
+																									<XPos>-64.21053</XPos>
+																									<YPos>-77.49562</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>16.4912280701754</XPos>
+																									<YPos>-81.4360770577933</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>80.3508771929824</XPos>
+																									<YPos>-30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_01" ID="{7C35B2A6-EFD0-4ED9-8853-6A367C7D7D32}">
+																							<PointList>
+																								<Point>
+																									<XPos>-70.52632</XPos>
+																									<YPos>80.47285</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>27.0175438596491</XPos>
+																									<YPos>77.2329246935201</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>71.9298245614035</XPos>
+																									<YPos>49.9124343257443</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_02" ID="{76995161-2580-4B50-B34A-FDD3E7B96050}">
+																							<PointList>
+																								<Point>
+																									<XPos>-75.78947</XPos>
+																									<YPos>12.17163</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-61.7543859649123</XPos>
+																									<YPos>43.9579684763573</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_03" ID="{C5AAE1F2-35F9-4622-A6A1-8EA1FAB5BF54}">
+																							<PointList>
+																								<Point>
+																									<XPos>75.08772</XPos>
+																									<YPos>-15.14886</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>67.719298245614</XPos>
+																									<YPos>14.5359019264448</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>91.578947368421</XPos>
+																									<YPos>30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_04" ID="{F664C4E7-1F98-41DD-8241-5B4799195DF3}">
+																							<PointList>
+																								<Point>
+																									<XPos>-36.84211</XPos>
+																									<YPos>-88.0035</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>46.3157894736842</XPos>
+																									<YPos>-96.4973730297723</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>88.4210526315789</XPos>
+																									<YPos>-73.7302977232925</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_05" ID="{47C4E51A-069C-489B-9DBD-C4E7DCF9F798}">
+																							<PointList>
+																								<Point>
+																									<XPos>-74.03509</XPos>
+																									<YPos>-32.662</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-52.6315789473684</XPos>
+																									<YPos>-84.2381786339755</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_06" ID="{468C8C43-C4DD-4BA0-80CC-ECDBF5A5927C}">
+																							<PointList>
+																								<Point>
+																									<XPos>76.49123</XPos>
+																									<YPos>81.52364</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>45.6140350877193</XPos>
+																									<YPos>83.53765323993</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_07" ID="{126AD09E-F6AA-4C76-90CE-A80D1BE2534B}">
+																							<PointList>
+																								<Point>
+																									<XPos>12.63158</XPos>
+																									<YPos>86.42732</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-35.4385964912281</XPos>
+																									<YPos>90.1926444833625</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																					</ChildrenList>
+																				</Position>
+																			</PositioningInfo>
+																			<ActiveSourceList>
+																				<ActiveSource Name="SX_LOWGROWLAMB-001" ID="{CB13F2F7-C3EB-4E6B-9CB9-A7239FB84F1A}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="SX_LOWGROWLAMB-002" ID="{85BE0B7C-255C-4639-A666-E44BA0AFA760}" ShortID="595197967">
+																			<PropertyList>
+																				<Property Name="3DPosition" Type="int16" Value="1"/>
+																				<Property Name="Volume" Type="Real64">
+																					<ValueList>
+																						<Value>12</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="Weight" Type="Real64">
+																					<ValueList>
+																						<Value>67</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="SX_LOWGROWLAMB-002" ID="{B8149700-6E06-41AD-B1EB-CA1344AF61EA}">
+																					<PropertyList>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="6.51428571428571"/>
+																						<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																						<Property Name="TrimBegin" Type="Real64" Value="6.51428571428571"/>
+																						<Property Name="TrimEnd" Type="Real64" Value="30.3999999999999"/>
+																					</PropertyList>
+																					<Language>SFX</Language>
+																					<AudioFile>SX_LOWGROWLAMB-002.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="564187307"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<PositioningInfo>
+																				<Position Name="" ID="{7E454BE1-FB30-4C80-9086-A43EE159BB71}">
+																					<PropertyList>
+																						<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+																						<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+																					</PropertyList>
+																					<ChildrenList>
+																						<Path2D Name="Growls_Path" ID="{86E50F7F-B6D4-4E1B-BA7F-E79BD480B737}">
+																							<PointList>
+																								<Point>
+																									<XPos>-64.21053</XPos>
+																									<YPos>-77.49562</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>16.4912280701754</XPos>
+																									<YPos>-81.4360770577933</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>80.3508771929824</XPos>
+																									<YPos>-30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_01" ID="{E0B4F9A5-4077-4EA0-BC48-A145C9AF5683}">
+																							<PointList>
+																								<Point>
+																									<XPos>-70.52632</XPos>
+																									<YPos>80.47285</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>27.0175438596491</XPos>
+																									<YPos>77.2329246935201</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>71.9298245614035</XPos>
+																									<YPos>49.9124343257443</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_02" ID="{8F16FE0E-4965-4B1F-9719-94F15D695A62}">
+																							<PointList>
+																								<Point>
+																									<XPos>-75.78947</XPos>
+																									<YPos>12.17163</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-61.7543859649123</XPos>
+																									<YPos>43.9579684763573</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_03" ID="{A0B2C5CD-12D0-4EB3-9DFA-D16969E2BD35}">
+																							<PointList>
+																								<Point>
+																									<XPos>75.08772</XPos>
+																									<YPos>-15.14886</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>67.719298245614</XPos>
+																									<YPos>14.5359019264448</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>91.578947368421</XPos>
+																									<YPos>30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_04" ID="{22720525-73A8-41DC-B053-FAC36DA22CE5}">
+																							<PointList>
+																								<Point>
+																									<XPos>-36.84211</XPos>
+																									<YPos>-88.0035</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>46.3157894736842</XPos>
+																									<YPos>-96.4973730297723</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>88.4210526315789</XPos>
+																									<YPos>-73.7302977232925</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_05" ID="{3FE12E11-8804-4BC7-B449-22CBD3AFD954}">
+																							<PointList>
+																								<Point>
+																									<XPos>-74.03509</XPos>
+																									<YPos>-32.662</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-52.6315789473684</XPos>
+																									<YPos>-84.2381786339755</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_06" ID="{03EC739C-0A87-4164-B70D-4BA755945D76}">
+																							<PointList>
+																								<Point>
+																									<XPos>76.49123</XPos>
+																									<YPos>81.52364</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>45.6140350877193</XPos>
+																									<YPos>83.53765323993</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_07" ID="{5A580DEB-6D36-4F1D-B7D9-65C9E13C34C4}">
+																							<PointList>
+																								<Point>
+																									<XPos>12.63158</XPos>
+																									<YPos>86.42732</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-35.4385964912281</XPos>
+																									<YPos>90.1926444833625</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																					</ChildrenList>
+																				</Position>
+																			</PositioningInfo>
+																			<ActiveSourceList>
+																				<ActiveSource Name="SX_LOWGROWLAMB-002" ID="{B8149700-6E06-41AD-B1EB-CA1344AF61EA}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="SX_LOWGROWLAMB-003" ID="{914C735E-2998-48D8-A01B-31C8C9AEAF32}" ShortID="401620470">
+																			<PropertyList>
+																				<Property Name="3DPosition" Type="int16" Value="1"/>
+																				<Property Name="Volume" Type="Real64">
+																					<ValueList>
+																						<Value>12</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="SX_LOWGROWLAMB-003" ID="{0E4849C4-31BD-4E36-B930-A952187D7053}">
+																					<PropertyList>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="7.56326530612245"/>
+																						<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																						<Property Name="TrimBegin" Type="Real64" Value="4.00408163265306"/>
+																						<Property Name="TrimEnd" Type="Real64" Value="29.3632653061224"/>
+																					</PropertyList>
+																					<Language>SFX</Language>
+																					<AudioFile>SX_LOWGROWLAMB-003.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="881706534"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<PositioningInfo>
+																				<Position Name="" ID="{284B7B39-A15E-4B22-84B1-0B65DE31F235}">
+																					<PropertyList>
+																						<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+																						<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+																					</PropertyList>
+																					<ChildrenList>
+																						<Path2D Name="Growls_Path" ID="{8FCC3CAC-E735-4A86-A583-A920F0A5F0DF}">
+																							<PointList>
+																								<Point>
+																									<XPos>-64.21053</XPos>
+																									<YPos>-77.49562</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>16.4912280701754</XPos>
+																									<YPos>-81.4360770577933</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>80.3508771929824</XPos>
+																									<YPos>-30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_01" ID="{C4379E0A-3835-4D2F-B4BC-6F062960D5DC}">
+																							<PointList>
+																								<Point>
+																									<XPos>-70.52632</XPos>
+																									<YPos>80.47285</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>27.0175438596491</XPos>
+																									<YPos>77.2329246935201</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>71.9298245614035</XPos>
+																									<YPos>49.9124343257443</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_02" ID="{8D392DE3-4C43-48CE-BDFA-23428F94A540}">
+																							<PointList>
+																								<Point>
+																									<XPos>-75.78947</XPos>
+																									<YPos>12.17163</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-61.7543859649123</XPos>
+																									<YPos>43.9579684763573</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_03" ID="{C457AB71-79D8-469B-9A89-5E51C8BC1836}">
+																							<PointList>
+																								<Point>
+																									<XPos>75.08772</XPos>
+																									<YPos>-15.14886</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>67.719298245614</XPos>
+																									<YPos>14.5359019264448</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>91.578947368421</XPos>
+																									<YPos>30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_04" ID="{386EB073-E3CE-451A-A7BE-028FA30E0053}">
+																							<PointList>
+																								<Point>
+																									<XPos>-36.84211</XPos>
+																									<YPos>-88.0035</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>46.3157894736842</XPos>
+																									<YPos>-96.4973730297723</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>88.4210526315789</XPos>
+																									<YPos>-73.7302977232925</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_05" ID="{9F416CC0-C0E0-44FD-9E85-8273D43D9BCB}">
+																							<PointList>
+																								<Point>
+																									<XPos>-74.03509</XPos>
+																									<YPos>-32.662</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-52.6315789473684</XPos>
+																									<YPos>-84.2381786339755</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_06" ID="{228FFCB3-2BAF-4102-A6D6-E08B0D2C5F59}">
+																							<PointList>
+																								<Point>
+																									<XPos>76.49123</XPos>
+																									<YPos>81.52364</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>45.6140350877193</XPos>
+																									<YPos>83.53765323993</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_07" ID="{E1BDED46-73BA-4F45-A65C-245082149030}">
+																							<PointList>
+																								<Point>
+																									<XPos>12.63158</XPos>
+																									<YPos>86.42732</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-35.4385964912281</XPos>
+																									<YPos>90.1926444833625</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																					</ChildrenList>
+																				</Position>
+																			</PositioningInfo>
+																			<ActiveSourceList>
+																				<ActiveSource Name="SX_LOWGROWLAMB-003" ID="{0E4849C4-31BD-4E36-B930-A952187D7053}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="SX_LOWGROWLAMB-004" ID="{EF9CF1C4-C227-41F5-B11C-05192A1738D7}" ShortID="57206366">
+																			<PropertyList>
+																				<Property Name="3DPosition" Type="int16" Value="1"/>
+																				<Property Name="Volume" Type="Real64">
+																					<ValueList>
+																						<Value>12</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="SX_LOWGROWLAMB-004" ID="{F9D49F64-CE66-4201-B6FB-0B27F4C26FAA}">
+																					<PropertyList>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="8.87755102040817"/>
+																						<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																						<Property Name="TrimBegin" Type="Real64" Value="23.0816326530612"/>
+																						<Property Name="TrimEnd" Type="Real64" Value="57.9999999999999"/>
+																					</PropertyList>
+																					<Language>SFX</Language>
+																					<AudioFile>SX_LOWGROWLAMB-004.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="747402839"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<PositioningInfo>
+																				<Position Name="" ID="{08AB8BAE-3C57-4232-A916-C6871850ED07}">
+																					<PropertyList>
+																						<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+																						<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+																					</PropertyList>
+																					<ChildrenList>
+																						<Path2D Name="Growls_Path" ID="{CF6D4931-F2EC-4524-9C1B-DBA5862E4151}">
+																							<PointList>
+																								<Point>
+																									<XPos>-64.21053</XPos>
+																									<YPos>-77.49562</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>16.4912280701754</XPos>
+																									<YPos>-81.4360770577933</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>80.3508771929824</XPos>
+																									<YPos>-30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_01" ID="{906D7209-7706-452C-83FD-A664F176A0D3}">
+																							<PointList>
+																								<Point>
+																									<XPos>-70.52632</XPos>
+																									<YPos>80.47285</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>27.0175438596491</XPos>
+																									<YPos>77.2329246935201</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>71.9298245614035</XPos>
+																									<YPos>49.9124343257443</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_02" ID="{C57B8B1E-039F-463B-B6F5-5908C8152D3E}">
+																							<PointList>
+																								<Point>
+																									<XPos>-75.78947</XPos>
+																									<YPos>12.17163</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-61.7543859649123</XPos>
+																									<YPos>43.9579684763573</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_03" ID="{798E2D8F-C2B0-4B33-A3CF-115783CD16F6}">
+																							<PointList>
+																								<Point>
+																									<XPos>75.08772</XPos>
+																									<YPos>-15.14886</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>67.719298245614</XPos>
+																									<YPos>14.5359019264448</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>91.578947368421</XPos>
+																									<YPos>30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_04" ID="{0948C234-DE97-4585-A047-09DA91E85E31}">
+																							<PointList>
+																								<Point>
+																									<XPos>-36.84211</XPos>
+																									<YPos>-88.0035</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>46.3157894736842</XPos>
+																									<YPos>-96.4973730297723</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>88.4210526315789</XPos>
+																									<YPos>-73.7302977232925</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_05" ID="{E5B7678E-C7B4-471A-B8DE-D9660C4A933B}">
+																							<PointList>
+																								<Point>
+																									<XPos>-74.03509</XPos>
+																									<YPos>-32.662</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-52.6315789473684</XPos>
+																									<YPos>-84.2381786339755</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_06" ID="{5B7F2ACD-B3E0-464C-A120-AF86FEB51FBE}">
+																							<PointList>
+																								<Point>
+																									<XPos>76.49123</XPos>
+																									<YPos>81.52364</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>45.6140350877193</XPos>
+																									<YPos>83.53765323993</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_07" ID="{6C66F55E-3BB5-4BA9-92B8-1A60987C83FB}">
+																							<PointList>
+																								<Point>
+																									<XPos>12.63158</XPos>
+																									<YPos>86.42732</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-35.4385964912281</XPos>
+																									<YPos>90.1926444833625</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																					</ChildrenList>
+																				</Position>
+																			</PositioningInfo>
+																			<ActiveSourceList>
+																				<ActiveSource Name="SX_LOWGROWLAMB-004" ID="{F9D49F64-CE66-4201-B6FB-0B27F4C26FAA}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="SX_LOWGROWLAMB-005" ID="{2CFF944F-3DE6-4197-90AE-388D5428E5C7}" ShortID="714392431">
+																			<PropertyList>
+																				<Property Name="3DPosition" Type="int16" Value="1"/>
+																				<Property Name="Volume" Type="Real64">
+																					<ValueList>
+																						<Value>12</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="SX_LOWGROWLAMB-005" ID="{AC905990-61E9-424B-A07B-68983EB0393D}">
+																					<PropertyList>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="15.1714285714286"/>
+																						<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																						<Property Name="TrimBegin" Type="Real64" Value="13.7265306122449"/>
+																						<Property Name="TrimEnd" Type="Real64" Value="50.5714285714286"/>
+																					</PropertyList>
+																					<Language>SFX</Language>
+																					<AudioFile>SX_LOWGROWLAMB-005.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="181900161"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<PositioningInfo>
+																				<Position Name="" ID="{83D769B5-7374-4DCC-8A43-6B3FDB743090}">
+																					<PropertyList>
+																						<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+																						<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+																					</PropertyList>
+																					<ChildrenList>
+																						<Path2D Name="Growls_Path" ID="{11E502FB-2E2A-445F-980B-7A5C3D7B8643}">
+																							<PointList>
+																								<Point>
+																									<XPos>-64.21053</XPos>
+																									<YPos>-77.49562</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>16.4912280701754</XPos>
+																									<YPos>-81.4360770577933</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>80.3508771929824</XPos>
+																									<YPos>-30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_01" ID="{546919B9-B568-4CC1-B15A-398B8A47A192}">
+																							<PointList>
+																								<Point>
+																									<XPos>-70.52632</XPos>
+																									<YPos>80.47285</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>27.0175438596491</XPos>
+																									<YPos>77.2329246935201</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>71.9298245614035</XPos>
+																									<YPos>49.9124343257443</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_02" ID="{CA4338F7-F456-4A6F-B015-1E6AA738A955}">
+																							<PointList>
+																								<Point>
+																									<XPos>-75.78947</XPos>
+																									<YPos>12.17163</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-61.7543859649123</XPos>
+																									<YPos>43.9579684763573</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_03" ID="{9F09C91B-6DB2-4BD3-B128-25DF16E06DDB}">
+																							<PointList>
+																								<Point>
+																									<XPos>75.08772</XPos>
+																									<YPos>-15.14886</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>67.719298245614</XPos>
+																									<YPos>14.5359019264448</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>91.578947368421</XPos>
+																									<YPos>30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_04" ID="{E84C3C41-8F85-4B52-939C-418ADEEE8736}">
+																							<PointList>
+																								<Point>
+																									<XPos>-36.84211</XPos>
+																									<YPos>-88.0035</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>46.3157894736842</XPos>
+																									<YPos>-96.4973730297723</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>88.4210526315789</XPos>
+																									<YPos>-73.7302977232925</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_05" ID="{735AEEE7-BC78-4A18-A01A-1DD7DBCCBF50}">
+																							<PointList>
+																								<Point>
+																									<XPos>-74.03509</XPos>
+																									<YPos>-32.662</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-52.6315789473684</XPos>
+																									<YPos>-84.2381786339755</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_06" ID="{27742069-AD33-4D9B-BB53-3A0A202D738E}">
+																							<PointList>
+																								<Point>
+																									<XPos>76.49123</XPos>
+																									<YPos>81.52364</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>45.6140350877193</XPos>
+																									<YPos>83.53765323993</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_07" ID="{39AC8E26-0084-4CD0-B7C9-75309AE541FA}">
+																							<PointList>
+																								<Point>
+																									<XPos>12.63158</XPos>
+																									<YPos>86.42732</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-35.4385964912281</XPos>
+																									<YPos>90.1926444833625</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																					</ChildrenList>
+																				</Position>
+																			</PositioningInfo>
+																			<ActiveSourceList>
+																				<ActiveSource Name="SX_LOWGROWLAMB-005" ID="{AC905990-61E9-424B-A07B-68983EB0393D}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="SX_LOWGROWLAMB-006" ID="{7C97259D-4D2D-49F6-8327-127DD2C2E8DD}" ShortID="540073468">
+																			<PropertyList>
+																				<Property Name="3DPosition" Type="int16" Value="1"/>
+																				<Property Name="Volume" Type="Real64">
+																					<ValueList>
+																						<Value>12</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="SX_LOWGROWLAMB-006" ID="{536AE2C2-2AC5-4D6D-9044-8FE4AA139416}">
+																					<PropertyList>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="5.26530612244898"/>
+																						<Property Name="LoopBegin" Type="Real64" Value="6.31836734693877"/>
+																						<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																						<Property Name="TrimBegin" Type="Real64" Value="5.79183673469387"/>
+																						<Property Name="TrimEnd" Type="Real64" Value="29.4857142857143"/>
+																					</PropertyList>
+																					<Language>SFX</Language>
+																					<AudioFile>SX_LOWGROWLAMB-006.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="670247480"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<PositioningInfo>
+																				<Position Name="" ID="{F774B31E-0924-4392-AD30-535A790A5919}">
+																					<PropertyList>
+																						<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+																						<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+																					</PropertyList>
+																					<ChildrenList>
+																						<Path2D Name="Growls_Path" ID="{66816D46-163F-431A-806B-AD4A7B514130}">
+																							<PointList>
+																								<Point>
+																									<XPos>-64.21053</XPos>
+																									<YPos>-77.49562</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>16.4912280701754</XPos>
+																									<YPos>-81.4360770577933</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>80.3508771929824</XPos>
+																									<YPos>-30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_01" ID="{9830064F-5AAD-4ADD-9740-7705B3F3C086}">
+																							<PointList>
+																								<Point>
+																									<XPos>-70.52632</XPos>
+																									<YPos>80.47285</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>27.0175438596491</XPos>
+																									<YPos>77.2329246935201</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>71.9298245614035</XPos>
+																									<YPos>49.9124343257443</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_02" ID="{93840875-F3A1-4E9E-BD6F-D8FA08BE9DFB}">
+																							<PointList>
+																								<Point>
+																									<XPos>-75.78947</XPos>
+																									<YPos>12.17163</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-61.7543859649123</XPos>
+																									<YPos>43.9579684763573</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_03" ID="{8334F621-8A9C-4E9B-82F6-CCD7D139CA0C}">
+																							<PointList>
+																								<Point>
+																									<XPos>75.08772</XPos>
+																									<YPos>-15.14886</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>67.719298245614</XPos>
+																									<YPos>14.5359019264448</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>91.578947368421</XPos>
+																									<YPos>30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_04" ID="{34209827-C5F0-4C3F-992E-A2C6EF457EF4}">
+																							<PointList>
+																								<Point>
+																									<XPos>-36.84211</XPos>
+																									<YPos>-88.0035</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>46.3157894736842</XPos>
+																									<YPos>-96.4973730297723</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>88.4210526315789</XPos>
+																									<YPos>-73.7302977232925</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_05" ID="{0D013B2D-0598-464B-B550-0AAAEDF89092}">
+																							<PointList>
+																								<Point>
+																									<XPos>-74.03509</XPos>
+																									<YPos>-32.662</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-52.6315789473684</XPos>
+																									<YPos>-84.2381786339755</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_06" ID="{D891B2CF-3508-47FC-89C2-97B7B3A95F3B}">
+																							<PointList>
+																								<Point>
+																									<XPos>76.49123</XPos>
+																									<YPos>81.52364</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>45.6140350877193</XPos>
+																									<YPos>83.53765323993</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_07" ID="{870D63C0-A2E7-4EBB-90E9-5B09E516FE48}">
+																							<PointList>
+																								<Point>
+																									<XPos>12.63158</XPos>
+																									<YPos>86.42732</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-35.4385964912281</XPos>
+																									<YPos>90.1926444833625</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																					</ChildrenList>
+																				</Position>
+																			</PositioningInfo>
+																			<ActiveSourceList>
+																				<ActiveSource Name="SX_LOWGROWLAMB-006" ID="{536AE2C2-2AC5-4D6D-9044-8FE4AA139416}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="SX_LOWGROWLAMB-007" ID="{0A076DBF-E73A-4298-BEDB-7E13D4374581}" ShortID="1032244597">
+																			<PropertyList>
+																				<Property Name="3DPosition" Type="int16" Value="1"/>
+																				<Property Name="Volume" Type="Real64">
+																					<ValueList>
+																						<Value>12</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="SX_LOWGROWLAMB-007" ID="{1F42D679-EA05-4CD1-BD02-DBC152B42118}">
+																					<PropertyList>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="11.8367346938776"/>
+																						<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																						<Property Name="TrimBegin" Type="Real64" Value="14.7959183673469"/>
+																						<Property Name="TrimEnd" Type="Real64" Value="49.7142857142857"/>
+																					</PropertyList>
+																					<Language>SFX</Language>
+																					<AudioFile>SX_LOWGROWLAMB-007.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="913779242"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<PositioningInfo>
+																				<Position Name="" ID="{40639EF0-50D7-4226-8991-C22EA1DDC32A}">
+																					<PropertyList>
+																						<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+																						<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+																					</PropertyList>
+																					<ChildrenList>
+																						<Path2D Name="Growls_Path" ID="{5D579C03-E42E-4232-B9EC-7F9C4E187251}">
+																							<PointList>
+																								<Point>
+																									<XPos>-64.21053</XPos>
+																									<YPos>-77.49562</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>16.4912280701754</XPos>
+																									<YPos>-81.4360770577933</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>80.3508771929824</XPos>
+																									<YPos>-30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_01" ID="{C2B53F03-2CA5-49C5-92FB-9E7C5362F827}">
+																							<PointList>
+																								<Point>
+																									<XPos>-70.52632</XPos>
+																									<YPos>80.47285</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>27.0175438596491</XPos>
+																									<YPos>77.2329246935201</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>71.9298245614035</XPos>
+																									<YPos>49.9124343257443</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_02" ID="{DEDAC517-E5C9-413D-A25E-3EE252F207C9}">
+																							<PointList>
+																								<Point>
+																									<XPos>-75.78947</XPos>
+																									<YPos>12.17163</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-61.7543859649123</XPos>
+																									<YPos>43.9579684763573</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_03" ID="{4256676F-315D-4563-B3DD-B7B228CA506D}">
+																							<PointList>
+																								<Point>
+																									<XPos>75.08772</XPos>
+																									<YPos>-15.14886</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>67.719298245614</XPos>
+																									<YPos>14.5359019264448</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>91.578947368421</XPos>
+																									<YPos>30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_04" ID="{832C0A2C-A414-44E0-9FA7-B2C7871DB722}">
+																							<PointList>
+																								<Point>
+																									<XPos>-36.84211</XPos>
+																									<YPos>-88.0035</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>46.3157894736842</XPos>
+																									<YPos>-96.4973730297723</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>88.4210526315789</XPos>
+																									<YPos>-73.7302977232925</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_05" ID="{6B5834C8-C143-405A-B26F-8B7B2D3515B7}">
+																							<PointList>
+																								<Point>
+																									<XPos>-74.03509</XPos>
+																									<YPos>-32.662</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-52.6315789473684</XPos>
+																									<YPos>-84.2381786339755</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_06" ID="{C1C67162-9958-4152-AC4A-18754ACBBFB8}">
+																							<PointList>
+																								<Point>
+																									<XPos>76.49123</XPos>
+																									<YPos>81.52364</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>45.6140350877193</XPos>
+																									<YPos>83.53765323993</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_07" ID="{1C07CA1B-ED43-4D43-8E2B-75C9816F64D6}">
+																							<PointList>
+																								<Point>
+																									<XPos>12.63158</XPos>
+																									<YPos>86.42732</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-35.4385964912281</XPos>
+																									<YPos>90.1926444833625</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																					</ChildrenList>
+																				</Position>
+																			</PositioningInfo>
+																			<ActiveSourceList>
+																				<ActiveSource Name="SX_LOWGROWLAMB-007" ID="{1F42D679-EA05-4CD1-BD02-DBC152B42118}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="SX_LOWGROWLAMB-008" ID="{BE9D991D-81FF-490D-9E33-797952E6A6CF}" ShortID="446182533">
+																			<PropertyList>
+																				<Property Name="3DPosition" Type="int16" Value="1"/>
+																				<Property Name="Volume" Type="Real64">
+																					<ValueList>
+																						<Value>12</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="SX_LOWGROWLAMB-008" ID="{94C3C5BD-95D1-481C-8495-C007730EDB32}">
+																					<PropertyList>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="8.28571428571428"/>
+																						<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																						<Property Name="TrimBegin" Type="Real64" Value="33.2827148150326"/>
+																						<Property Name="TrimEnd" Type="Real64" Value="62.1428571428571"/>
+																					</PropertyList>
+																					<Language>SFX</Language>
+																					<AudioFile>SX_LOWGROWLAMB-008.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="131477098"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<PositioningInfo>
+																				<Position Name="" ID="{AA9B69C8-2C45-4043-B51A-784F92B17F6C}">
+																					<PropertyList>
+																						<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+																						<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+																					</PropertyList>
+																					<ChildrenList>
+																						<Path2D Name="Growls_Path" ID="{A8263888-2F64-4D06-AE6D-2D955BDA7A99}">
+																							<PointList>
+																								<Point>
+																									<XPos>-64.21053</XPos>
+																									<YPos>-77.49562</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>16.4912280701754</XPos>
+																									<YPos>-81.4360770577933</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>80.3508771929824</XPos>
+																									<YPos>-30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_01" ID="{16B133DC-2FEE-4E6E-870A-16605C412A82}">
+																							<PointList>
+																								<Point>
+																									<XPos>-70.52632</XPos>
+																									<YPos>80.47285</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>27.0175438596491</XPos>
+																									<YPos>77.2329246935201</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>71.9298245614035</XPos>
+																									<YPos>49.9124343257443</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_02" ID="{AF777D8B-7431-42C5-9ABB-A78537623220}">
+																							<PointList>
+																								<Point>
+																									<XPos>-75.78947</XPos>
+																									<YPos>12.17163</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-61.7543859649123</XPos>
+																									<YPos>43.9579684763573</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_03" ID="{FDA5F5DC-FA16-4158-A987-4898397A747C}">
+																							<PointList>
+																								<Point>
+																									<XPos>75.08772</XPos>
+																									<YPos>-15.14886</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>67.719298245614</XPos>
+																									<YPos>14.5359019264448</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>91.578947368421</XPos>
+																									<YPos>30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_04" ID="{B0983FEE-2CE5-410C-AC11-3E44839A572F}">
+																							<PointList>
+																								<Point>
+																									<XPos>-36.84211</XPos>
+																									<YPos>-88.0035</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>46.3157894736842</XPos>
+																									<YPos>-96.4973730297723</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>88.4210526315789</XPos>
+																									<YPos>-73.7302977232925</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_05" ID="{05C13195-1B15-4050-BB75-DB3C82506608}">
+																							<PointList>
+																								<Point>
+																									<XPos>-74.03509</XPos>
+																									<YPos>-32.662</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-52.6315789473684</XPos>
+																									<YPos>-84.2381786339755</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_06" ID="{0FBC49E6-4837-459C-B36D-5BA71D9D33BD}">
+																							<PointList>
+																								<Point>
+																									<XPos>76.49123</XPos>
+																									<YPos>81.52364</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>45.6140350877193</XPos>
+																									<YPos>83.53765323993</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_07" ID="{5CB524BC-3248-45F2-A5E5-96549CA410BF}">
+																							<PointList>
+																								<Point>
+																									<XPos>12.63158</XPos>
+																									<YPos>86.42732</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-35.4385964912281</XPos>
+																									<YPos>90.1926444833625</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																					</ChildrenList>
+																				</Position>
+																			</PositioningInfo>
+																			<ActiveSourceList>
+																				<ActiveSource Name="SX_LOWGROWLAMB-008" ID="{94C3C5BD-95D1-481C-8495-C007730EDB32}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="SX_LOWGROWLAMB-009" ID="{ECCA7A0C-4967-4F94-8C09-73CDB640D3EC}" ShortID="883079174">
+																			<PropertyList>
+																				<Property Name="3DPosition" Type="int16" Value="1"/>
+																				<Property Name="Volume" Type="Real64">
+																					<ValueList>
+																						<Value>12</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="SX_LOWGROWLAMB-009" ID="{44D01500-A2CE-4544-A04C-CF3730786008}">
+																					<PropertyList>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="10.530612244898"/>
+																						<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																						<Property Name="TrimBegin" Type="Real64" Value="15.7959183673469"/>
+																						<Property Name="TrimEnd" Type="Real64" Value="51.6"/>
+																					</PropertyList>
+																					<Language>SFX</Language>
+																					<AudioFile>SX_LOWGROWLAMB-009.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="526258960"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<PositioningInfo>
+																				<Position Name="" ID="{8DF04BBD-2659-4DA8-9243-473039C98BB0}">
+																					<PropertyList>
+																						<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+																						<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+																					</PropertyList>
+																					<ChildrenList>
+																						<Path2D Name="Growls_Path" ID="{F81712DE-EEC0-4B04-97AC-7E6B93878F50}">
+																							<PointList>
+																								<Point>
+																									<XPos>-64.21053</XPos>
+																									<YPos>-77.49562</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>16.4912280701754</XPos>
+																									<YPos>-81.4360770577933</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>80.3508771929824</XPos>
+																									<YPos>-30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_01" ID="{C036E4C0-3774-467C-829D-A964A27DAABF}">
+																							<PointList>
+																								<Point>
+																									<XPos>-70.52632</XPos>
+																									<YPos>80.47285</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>27.0175438596491</XPos>
+																									<YPos>77.2329246935201</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>71.9298245614035</XPos>
+																									<YPos>49.9124343257443</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_02" ID="{DC42F5DA-4F52-4084-9F30-9C22152ADDCB}">
+																							<PointList>
+																								<Point>
+																									<XPos>-75.78947</XPos>
+																									<YPos>12.17163</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-61.7543859649123</XPos>
+																									<YPos>43.9579684763573</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_03" ID="{BB228F63-9C2F-4094-989A-3E865638F963}">
+																							<PointList>
+																								<Point>
+																									<XPos>75.08772</XPos>
+																									<YPos>-15.14886</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>67.719298245614</XPos>
+																									<YPos>14.5359019264448</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>91.578947368421</XPos>
+																									<YPos>30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_04" ID="{DEB8941F-F1B1-4E8D-829B-EC8220D95402}">
+																							<PointList>
+																								<Point>
+																									<XPos>-36.84211</XPos>
+																									<YPos>-88.0035</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>46.3157894736842</XPos>
+																									<YPos>-96.4973730297723</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>88.4210526315789</XPos>
+																									<YPos>-73.7302977232925</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_05" ID="{7B676B19-ADF0-4D6B-B9F5-BF6061F324CD}">
+																							<PointList>
+																								<Point>
+																									<XPos>-74.03509</XPos>
+																									<YPos>-32.662</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-52.6315789473684</XPos>
+																									<YPos>-84.2381786339755</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_06" ID="{78ADEFD6-B45A-4FA3-8A30-21070906D312}">
+																							<PointList>
+																								<Point>
+																									<XPos>76.49123</XPos>
+																									<YPos>81.52364</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>45.6140350877193</XPos>
+																									<YPos>83.53765323993</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_07" ID="{0FB3B6B8-3CE0-41D8-B48F-9F9DF74612F7}">
+																							<PointList>
+																								<Point>
+																									<XPos>12.63158</XPos>
+																									<YPos>86.42732</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-35.4385964912281</XPos>
+																									<YPos>90.1926444833625</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																					</ChildrenList>
+																				</Position>
+																			</PositioningInfo>
+																			<ActiveSourceList>
+																				<ActiveSource Name="SX_LOWGROWLAMB-009" ID="{44D01500-A2CE-4544-A04C-CF3730786008}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="SX_LOWGROWLAMB-010" ID="{41CD4E93-B04B-4B5D-90DB-4E25AEE1F972}" ShortID="308032366">
+																			<PropertyList>
+																				<Property Name="3DPosition" Type="int16" Value="1"/>
+																				<Property Name="Volume" Type="Real64">
+																					<ValueList>
+																						<Value>12</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="SX_LOWGROWLAMB-010" ID="{B01C01AC-59A3-4B09-B0A2-B9FB8825F0EB}">
+																					<PropertyList>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="7.91028941644685"/>
+																						<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																						<Property Name="TrimBegin" Type="Real64" Value="53.933791475774"/>
+																						<Property Name="TrimEnd" Type="Real64" Value="91.3278868989773"/>
+																					</PropertyList>
+																					<Language>SFX</Language>
+																					<AudioFile>SX_LOWGROWLAMB-010.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="1060915629"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<PositioningInfo>
+																				<Position Name="" ID="{3A9AD8A1-4966-414C-8CC7-1DFCAE93D0EC}">
+																					<PropertyList>
+																						<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+																						<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+																					</PropertyList>
+																					<ChildrenList>
+																						<Path2D Name="Growls_Path" ID="{2FACCCC1-6E64-4CC2-904D-658E2B8DB149}">
+																							<PointList>
+																								<Point>
+																									<XPos>-64.21053</XPos>
+																									<YPos>-77.49562</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>16.4912280701754</XPos>
+																									<YPos>-81.4360770577933</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>80.3508771929824</XPos>
+																									<YPos>-30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_01" ID="{53677C24-7474-49CC-932E-7DFF18D6EC60}">
+																							<PointList>
+																								<Point>
+																									<XPos>-70.52632</XPos>
+																									<YPos>80.47285</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>27.0175438596491</XPos>
+																									<YPos>77.2329246935201</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>71.9298245614035</XPos>
+																									<YPos>49.9124343257443</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_02" ID="{839DF9A9-3057-4194-89A7-85ABEB06437B}">
+																							<PointList>
+																								<Point>
+																									<XPos>-75.78947</XPos>
+																									<YPos>12.17163</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-61.7543859649123</XPos>
+																									<YPos>43.9579684763573</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_03" ID="{FF674E7F-9873-4173-9172-55263F7A882B}">
+																							<PointList>
+																								<Point>
+																									<XPos>75.08772</XPos>
+																									<YPos>-15.14886</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>67.719298245614</XPos>
+																									<YPos>14.5359019264448</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>91.578947368421</XPos>
+																									<YPos>30.2977232924694</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_04" ID="{971B1B69-A217-485D-A02F-926718520F27}">
+																							<PointList>
+																								<Point>
+																									<XPos>-36.84211</XPos>
+																									<YPos>-88.0035</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>46.3157894736842</XPos>
+																									<YPos>-96.4973730297723</YPos>
+																									<Flags>0</Flags>
+																									<Time>2500</Time>
+																								</Point>
+																								<Point>
+																									<XPos>88.4210526315789</XPos>
+																									<YPos>-73.7302977232925</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_05" ID="{7014AFCD-FA3B-46E3-84FE-F21BCAD91102}">
+																							<PointList>
+																								<Point>
+																									<XPos>-74.03509</XPos>
+																									<YPos>-32.662</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-52.6315789473684</XPos>
+																									<YPos>-84.2381786339755</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_06" ID="{D559FDCC-79CA-4399-8E97-1B669B0FEA00}">
+																							<PointList>
+																								<Point>
+																									<XPos>76.49123</XPos>
+																									<YPos>81.52364</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>45.6140350877193</XPos>
+																									<YPos>83.53765323993</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																						<Path2D Name="Growls_Path_07" ID="{ADEAC8A1-268C-4C56-AB33-7BA0789BF235}">
+																							<PointList>
+																								<Point>
+																									<XPos>12.63158</XPos>
+																									<YPos>86.42732</YPos>
+																									<Flags>12</Flags>
+																									<Time>0</Time>
+																								</Point>
+																								<Point>
+																									<XPos>-35.4385964912281</XPos>
+																									<YPos>90.1926444833625</YPos>
+																									<Flags>0</Flags>
+																									<Time>5000</Time>
+																								</Point>
+																							</PointList>
+																						</Path2D>
+																					</ChildrenList>
+																				</Position>
+																			</PositioningInfo>
+																			<ActiveSourceList>
+																				<ActiveSource Name="SX_LOWGROWLAMB-010" ID="{B01C01AC-59A3-4B09-B0A2-B9FB8825F0EB}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																	</ChildrenList>
+																</RandomSequenceContainer>
+																<RandomSequenceContainer Name="Cymbals" ID="{F6810CDE-0E51-4930-B5F2-D0ED1FF06424}" ShortID="919467974">
+																	<PropertyList>
+																		<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+																		<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+																		<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+																		<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+																		<Property Name="Volume" Type="Real64">
+																			<ValueList>
+																				<Value>-25</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Attenuation">
+																			<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																		</Reference>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<Sound Name="Bowed Metals_FX_10" ID="{10EA1B01-9441-49F9-9224-5727542ED164}" ShortID="883431419">
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="Bowed Metals_FX_10" ID="{577E41CD-EDE0-4DD9-BA9B-CD860561C6D2}">
+																					<Language>SFX</Language>
+																					<AudioFile>Bowed Metals_FX_10.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="466981827"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<ActiveSourceList>
+																				<ActiveSource Name="Bowed Metals_FX_10" ID="{577E41CD-EDE0-4DD9-BA9B-CD860561C6D2}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="Bowed Metals_FX_11" ID="{A56C772F-C332-4FF7-9428-F14D6BFFDE77}" ShortID="933922610">
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="Bowed Metals_FX_11" ID="{8BD7CC0C-4050-4A31-AD74-607BDB5D1AE7}">
+																					<Language>SFX</Language>
+																					<AudioFile>Bowed Metals_FX_11.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="736059846"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<ActiveSourceList>
+																				<ActiveSource Name="Bowed Metals_FX_11" ID="{8BD7CC0C-4050-4A31-AD74-607BDB5D1AE7}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="Bowed Metals_FX_12" ID="{12A0A3DD-943E-45BF-88F8-C6F4FE353036}" ShortID="639788954">
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="Bowed Metals_FX_12" ID="{8A4ED6BC-D611-4CCB-8373-29AF5898AB2B}">
+																					<Language>SFX</Language>
+																					<AudioFile>Bowed Metals_FX_12.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="589382019"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<ActiveSourceList>
+																				<ActiveSource Name="Bowed Metals_FX_12" ID="{8A4ED6BC-D611-4CCB-8373-29AF5898AB2B}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="Bowed Metals_FX_13" ID="{13D577E6-5CE0-4766-8821-80F28A0D87BE}" ShortID="586117769">
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="Bowed Metals_FX_13" ID="{B952ED2E-2A8E-4B3D-B371-C14289F45FC8}">
+																					<Language>SFX</Language>
+																					<AudioFile>Bowed Metals_FX_13.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="811562710"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<ActiveSourceList>
+																				<ActiveSource Name="Bowed Metals_FX_13" ID="{B952ED2E-2A8E-4B3D-B371-C14289F45FC8}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="Bowed Metals_FX_14" ID="{A23370FE-9A77-4928-A3EA-CBE80C805EF3}" ShortID="789245761">
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="Bowed Metals_FX_14" ID="{DB659582-2ED5-47C3-A450-AA933659B3D5}">
+																					<Language>SFX</Language>
+																					<AudioFile>Bowed Metals_FX_14.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="403455851"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<ActiveSourceList>
+																				<ActiveSource Name="Bowed Metals_FX_14" ID="{DB659582-2ED5-47C3-A450-AA933659B3D5}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="Bowed Metals_FX_15" ID="{4D82CFA4-5581-4D12-BB0E-A3A085F41032}" ShortID="380420878">
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="Bowed Metals_FX_15" ID="{138536FC-E2DD-45E9-A37C-88854A530F37}">
+																					<Language>SFX</Language>
+																					<AudioFile>Bowed Metals_FX_15.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="1069511858"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<ActiveSourceList>
+																				<ActiveSource Name="Bowed Metals_FX_15" ID="{138536FC-E2DD-45E9-A37C-88854A530F37}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="Bowed Metals_FX_16" ID="{E850702F-4D8C-4233-A054-CB0060F91440}" ShortID="627095966">
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="Bowed Metals_FX_16" ID="{6D78AD4A-F0A0-4A46-BFBD-10DE4F0DFB9F}">
+																					<Language>SFX</Language>
+																					<AudioFile>Bowed Metals_FX_16.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="10778220"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<ActiveSourceList>
+																				<ActiveSource Name="Bowed Metals_FX_16" ID="{6D78AD4A-F0A0-4A46-BFBD-10DE4F0DFB9F}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="Bowed Metals_FX_17" ID="{C7E36409-BADF-40B4-A2EE-EC7D34085441}" ShortID="225052850">
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="Bowed Metals_FX_17" ID="{1D47C897-8F3D-4A5A-B74F-F0CDE6967831}">
+																					<Language>SFX</Language>
+																					<AudioFile>Bowed Metals_FX_17.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="19639481"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<ActiveSourceList>
+																				<ActiveSource Name="Bowed Metals_FX_17" ID="{1D47C897-8F3D-4A5A-B74F-F0CDE6967831}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																		<Sound Name="Bowed Metals_FX_18" ID="{C871590F-15FF-411A-BC6C-0C041B2C00FF}" ShortID="849504343">
+																			<ReferenceList>
+																				<Reference Name="Attenuation">
+																					<ObjectRef Name="ObjectAttenuation" ID="{2F186679-CBF3-4563-BEE6-F5B48A64A600}" WorkUnitID="{C43C02CE-74BF-4BE6-B54D-1F4CAB9766EF}"/>
+																				</Reference>
+																				<Reference Name="Conversion">
+																					<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																				</Reference>
+																				<Reference Name="OutputBus">
+																					<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																				</Reference>
+																			</ReferenceList>
+																			<ChildrenList>
+																				<AudioFileSource Name="Bowed Metals_FX_18" ID="{95FAAC38-DC79-49F3-A8E2-B19E62518387}">
+																					<Language>SFX</Language>
+																					<AudioFile>Bowed Metals_FX_18.wav</AudioFile>
+																					<MediaIDList>
+																						<MediaID ID="890728779"/>
+																					</MediaIDList>
+																				</AudioFileSource>
+																			</ChildrenList>
+																			<ActiveSourceList>
+																				<ActiveSource Name="Bowed Metals_FX_18" ID="{95FAAC38-DC79-49F3-A8E2-B19E62518387}" Platform="Linked"/>
+																			</ActiveSourceList>
+																		</Sound>
+																	</ChildrenList>
+																</RandomSequenceContainer>
+															</ChildrenList>
+															<PositioningInfo>
+																<Position Name="" ID="{BFD6C47E-DCEF-43D8-A84C-EC75883C5BDD}">
+																	<PropertyList>
+																		<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+																		<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+																	</PropertyList>
+																	<ChildrenList>
+																		<Path2D Name="Growls_Path" ID="{F75D7541-DF00-4362-81BF-EFD8A56D7827}">
+																			<PointList>
+																				<Point>
+																					<XPos>-64.21053</XPos>
+																					<YPos>-77.49562</YPos>
+																					<Flags>12</Flags>
+																					<Time>0</Time>
+																				</Point>
+																				<Point>
+																					<XPos>16.4912280701754</XPos>
+																					<YPos>-81.4360770577933</YPos>
+																					<Flags>0</Flags>
+																					<Time>2500</Time>
+																				</Point>
+																				<Point>
+																					<XPos>80.3508771929824</XPos>
+																					<YPos>-30.2977232924694</YPos>
+																					<Flags>0</Flags>
+																					<Time>5000</Time>
+																				</Point>
+																			</PointList>
+																		</Path2D>
+																		<Path2D Name="Growls_Path_01" ID="{B596AD96-D4B0-4552-AEA9-C8F90F4CECE4}">
+																			<PointList>
+																				<Point>
+																					<XPos>-70.52632</XPos>
+																					<YPos>80.47285</YPos>
+																					<Flags>12</Flags>
+																					<Time>0</Time>
+																				</Point>
+																				<Point>
+																					<XPos>27.0175438596491</XPos>
+																					<YPos>77.2329246935201</YPos>
+																					<Flags>0</Flags>
+																					<Time>2500</Time>
+																				</Point>
+																				<Point>
+																					<XPos>71.9298245614035</XPos>
+																					<YPos>49.9124343257443</YPos>
+																					<Flags>0</Flags>
+																					<Time>5000</Time>
+																				</Point>
+																			</PointList>
+																		</Path2D>
+																		<Path2D Name="Growls_Path_02" ID="{CFB2EEF7-D959-4E6B-9306-368CD0C59025}">
+																			<PointList>
+																				<Point>
+																					<XPos>-75.78947</XPos>
+																					<YPos>12.17163</YPos>
+																					<Flags>12</Flags>
+																					<Time>0</Time>
+																				</Point>
+																				<Point>
+																					<XPos>-61.7543859649123</XPos>
+																					<YPos>43.9579684763573</YPos>
+																					<Flags>0</Flags>
+																					<Time>5000</Time>
+																				</Point>
+																			</PointList>
+																		</Path2D>
+																		<Path2D Name="Growls_Path_03" ID="{3C68F040-7E94-48BD-887A-4CFDEEC5EAC1}">
+																			<PointList>
+																				<Point>
+																					<XPos>75.08772</XPos>
+																					<YPos>-15.14886</YPos>
+																					<Flags>12</Flags>
+																					<Time>0</Time>
+																				</Point>
+																				<Point>
+																					<XPos>67.719298245614</XPos>
+																					<YPos>14.5359019264448</YPos>
+																					<Flags>0</Flags>
+																					<Time>2500</Time>
+																				</Point>
+																				<Point>
+																					<XPos>91.578947368421</XPos>
+																					<YPos>30.2977232924694</YPos>
+																					<Flags>0</Flags>
+																					<Time>5000</Time>
+																				</Point>
+																			</PointList>
+																		</Path2D>
+																		<Path2D Name="Growls_Path_04" ID="{2F1915B6-081B-47C9-85D4-E5E773A422A0}">
+																			<PointList>
+																				<Point>
+																					<XPos>-36.84211</XPos>
+																					<YPos>-88.0035</YPos>
+																					<Flags>12</Flags>
+																					<Time>0</Time>
+																				</Point>
+																				<Point>
+																					<XPos>46.3157894736842</XPos>
+																					<YPos>-96.4973730297723</YPos>
+																					<Flags>0</Flags>
+																					<Time>2500</Time>
+																				</Point>
+																				<Point>
+																					<XPos>88.4210526315789</XPos>
+																					<YPos>-73.7302977232925</YPos>
+																					<Flags>0</Flags>
+																					<Time>5000</Time>
+																				</Point>
+																			</PointList>
+																		</Path2D>
+																		<Path2D Name="Growls_Path_05" ID="{A882626F-A32E-4773-A505-8A5550F4F379}">
+																			<PointList>
+																				<Point>
+																					<XPos>-74.03509</XPos>
+																					<YPos>-32.662</YPos>
+																					<Flags>12</Flags>
+																					<Time>0</Time>
+																				</Point>
+																				<Point>
+																					<XPos>-52.6315789473684</XPos>
+																					<YPos>-84.2381786339755</YPos>
+																					<Flags>0</Flags>
+																					<Time>5000</Time>
+																				</Point>
+																			</PointList>
+																		</Path2D>
+																		<Path2D Name="Growls_Path_06" ID="{B8210F21-E35F-4985-BA7B-B1D5138D168B}">
+																			<PointList>
+																				<Point>
+																					<XPos>76.49123</XPos>
+																					<YPos>81.52364</YPos>
+																					<Flags>12</Flags>
+																					<Time>0</Time>
+																				</Point>
+																				<Point>
+																					<XPos>45.6140350877193</XPos>
+																					<YPos>83.53765323993</YPos>
+																					<Flags>0</Flags>
+																					<Time>5000</Time>
+																				</Point>
+																			</PointList>
+																		</Path2D>
+																		<Path2D Name="Growls_Path_07" ID="{2231BA29-3E7C-4409-9517-0FA0563552AA}">
+																			<PointList>
+																				<Point>
+																					<XPos>12.63158</XPos>
+																					<YPos>86.42732</YPos>
+																					<Flags>12</Flags>
+																					<Time>0</Time>
+																				</Point>
+																				<Point>
+																					<XPos>-35.4385964912281</XPos>
+																					<YPos>90.1926444833625</YPos>
+																					<Flags>0</Flags>
+																					<Time>5000</Time>
+																				</Point>
+																			</PointList>
+																		</Path2D>
+																	</ChildrenList>
+																</Position>
+															</PositioningInfo>
+														</RandomSequenceContainer>
+													</ChildrenList>
+												</BlendContainer>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="AMBDrone" ID="{69AB8D25-ABBC-41B6-9B3B-D19A430BBE69}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+											<BlendTrackList>
+												<BlendTrack Name="EnvironmentFade" ID="{84B61640-D017-4FCE-8263-DEA940250C83}" ShortID="225461570">
+													<PropertyList>
+														<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="LayerCrossFadeControlInput">
+															<ObjectRef Name="PlayerDepth" ID="{E2221916-5F0F-44EB-BDD7-B568226560C3}" WorkUnitID="{F54A8AF3-C696-4D61-B966-006C423561FC}"/>
+														</Reference>
+													</ReferenceList>
+													<BlendTrackAssocList>
+														<BlendTrackAssoc>
+															<ItemRef Name="Level1" ID="{346B4BC7-1247-4E83-A384-344711B8CFC7}"/>
+															<CrossfadingInfo>
+																<LeftEdgePos>0</LeftEdgePos>
+																<LeftFadingMode>Automatic</LeftFadingMode>
+																<RightEdgePos>42.4771663298446</RightEdgePos>
+																<RightFadingMode>Automatic</RightFadingMode>
+															</CrossfadingInfo>
+														</BlendTrackAssoc>
+														<BlendTrackAssoc>
+															<ItemRef Name="Level2" ID="{7EF7459D-09DB-4074-B3E3-F05B67F81432}"/>
+															<CrossfadingInfo>
+																<LeftEdgePos>21.8302309167091</LeftEdgePos>
+																<LeftFadingMode>Automatic</LeftFadingMode>
+																<RightEdgePos>75.7860430233385</RightEdgePos>
+																<RightFadingMode>Automatic</RightFadingMode>
+															</CrossfadingInfo>
+														</BlendTrackAssoc>
+														<BlendTrackAssoc>
+															<ItemRef Name="Level3" ID="{B79880A2-7593-46E8-8AE2-2A892326CA0E}"/>
+															<CrossfadingInfo>
+																<LeftEdgePos>54.2746172985291</LeftEdgePos>
+																<LeftFadingMode>Automatic</LeftFadingMode>
+																<RightEdgePos>100</RightEdgePos>
+																<RightFadingMode>Automatic</RightFadingMode>
+															</CrossfadingInfo>
+														</BlendTrackAssoc>
+													</BlendTrackAssocList>
+												</BlendTrack>
+											</BlendTrackList>
+										</BlendContainer>
 									</ChildrenList>
-									<BlendTrackList>
-										<BlendTrack Name="EnvironmentFade" ID="{84B61640-D017-4FCE-8263-DEA940250C83}" ShortID="225461570">
-											<PropertyList>
-												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="LayerCrossFadeControlInput">
-													<ObjectRef Name="PlayerDepth" ID="{E2221916-5F0F-44EB-BDD7-B568226560C3}" WorkUnitID="{F54A8AF3-C696-4D61-B966-006C423561FC}"/>
-												</Reference>
-											</ReferenceList>
-											<BlendTrackAssocList>
-												<BlendTrackAssoc>
-													<ItemRef Name="Level1" ID="{346B4BC7-1247-4E83-A384-344711B8CFC7}"/>
-													<CrossfadingInfo>
-														<LeftEdgePos>0</LeftEdgePos>
-														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>32.8454382845188</RightEdgePos>
-														<RightFadingMode>Automatic</RightFadingMode>
-													</CrossfadingInfo>
-												</BlendTrackAssoc>
-												<BlendTrackAssoc>
-													<ItemRef Name="Level2" ID="{7EF7459D-09DB-4074-B3E3-F05B67F81432}"/>
-													<CrossfadingInfo>
-														<LeftEdgePos>28.9123838912134</LeftEdgePos>
-														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>65.021170502092</RightEdgePos>
-														<RightFadingMode>Automatic</RightFadingMode>
-													</CrossfadingInfo>
-												</BlendTrackAssoc>
-												<BlendTrackAssoc>
-													<ItemRef Name="Level3" ID="{B79880A2-7593-46E8-8AE2-2A892326CA0E}"/>
-													<CrossfadingInfo>
-														<LeftEdgePos>62.489914748954</LeftEdgePos>
-														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>100</RightEdgePos>
-														<RightFadingMode>Automatic</RightFadingMode>
-													</CrossfadingInfo>
-												</BlendTrackAssoc>
-											</BlendTrackAssocList>
-										</BlendTrack>
-									</BlendTrackList>
 								</BlendContainer>
 							</ChildrenList>
 						</ActorMixer>
@@ -784,12 +2773,15 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<Custom>
-										<Attenuation Name="Attenuation (Custom)" ID="{A14E79E7-B30F-412C-B791-0BCF24168C05}" ShortID="394679344">
+									<Custom CreatedFrom="{2F186679-CBF3-4563-BEE6-F5B48A64A600}">
+										<Attenuation Name="ObjectAttenuation (Custom)" ID="{B016C9BE-00BD-4193-813F-043E522CA070}" ShortID="870141921">
+											<PropertyList>
+												<Property Name="RadiusMax" Type="Real64" Value="30"/>
+											</PropertyList>
 											<CurveUsageInfoList>
 												<VolumeDryUsage>
 													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-														<Curve Name="VolumeDry" ID="{B15550BB-5C5C-4DC1-A67B-5963641EAF0A}">
+														<Curve Name="VolumeDry" ID="{BA881CC1-AD81-464A-8015-C805B8893780}">
 															<PropertyList>
 																<Property Name="Flags" Type="int32" Value="3"/>
 															</PropertyList>
@@ -798,9 +2790,16 @@
 																	<XPos>0</XPos>
 																	<YPos>0</YPos>
 																	<Flags>5</Flags>
+																	<SegmentShape>Exp3</SegmentShape>
 																</Point>
 																<Point>
-																	<XPos>100</XPos>
+																	<XPos>4.30605</XPos>
+																	<YPos>-1.41845</YPos>
+																	<Flags>0</Flags>
+																	<SegmentShape>SCurve</SegmentShape>
+																</Point>
+																<Point>
+																	<XPos>30</XPos>
 																	<YPos>-200</YPos>
 																	<Flags>37</Flags>
 																</Point>
@@ -931,6 +2930,7 @@
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="15"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1164,7 +3164,19 @@
 						<ObjectList Name="Effects">
 							<Reference>
 								<Local>
-									<EffectSlot Name="" ID="{6A75589C-08F8-4A63-A460-A6E5246B2F4C}" ShortID="679641261"/>
+									<EffectSlot Name="" ID="{F7C7383A-961D-4C1E-9CE3-5627A757952B}" ShortID="285568252">
+										<ReferenceList>
+											<Reference Name="Effect">
+												<Custom>
+													<Effect Name="Gain (Custom)" ID="{C897CDB3-28A6-4B7F-A274-1A28757A9B13}" ShortID="811968549" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+														<PropertyList>
+															<Property Name="FullBandGain" Type="Real32" Value="24"/>
+														</PropertyList>
+													</Effect>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
 								</Local>
 							</Reference>
 						</ObjectList>
