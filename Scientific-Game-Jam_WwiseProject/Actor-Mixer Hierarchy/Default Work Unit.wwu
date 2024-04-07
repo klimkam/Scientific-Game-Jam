@@ -709,7 +709,70 @@
 												</RandomSequenceContainer>
 											</ChildrenList>
 										</BlendContainer>
+										<Sound Name="AMBDrone" ID="{CAFD322C-0942-4AB3-884E-742C61A981F2}" ShortID="829056762">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AMBDrone" ID="{69AB8D25-ABBC-41B6-9B3B-D19A430BBE69}">
+													<Language>SFX</Language>
+													<AudioFile>AMBDrone.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="5060706"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AMBDrone" ID="{69AB8D25-ABBC-41B6-9B3B-D19A430BBE69}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
+									<BlendTrackList>
+										<BlendTrack Name="EnvironmentFade" ID="{84B61640-D017-4FCE-8263-DEA940250C83}" ShortID="225461570">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="PlayerDepth" ID="{E2221916-5F0F-44EB-BDD7-B568226560C3}" WorkUnitID="{F54A8AF3-C696-4D61-B966-006C423561FC}"/>
+												</Reference>
+											</ReferenceList>
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="Level1" ID="{346B4BC7-1247-4E83-A384-344711B8CFC7}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>0</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>32.8454382845188</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="Level2" ID="{7EF7459D-09DB-4074-B3E3-F05B67F81432}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>28.9123838912134</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>65.021170502092</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="Level3" ID="{B79880A2-7593-46E8-8AE2-2A892326CA0E}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>62.489914748954</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>100</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+									</BlendTrackList>
 								</BlendContainer>
 							</ChildrenList>
 						</ActorMixer>
