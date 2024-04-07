@@ -114,6 +114,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="NewTestEvent" ID="{A704B68A-BD4A-4A08-9380-08670BFCDA12}"/>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

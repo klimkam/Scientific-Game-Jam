@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	573290449	AkE_PlayerMove			\Default Work Unit\PlayerActions\AkE_PlayerMove	
 	690181958	AkE_EnemyGrowl			\Default Work Unit\Enemies\AkE_EnemyGrowl	
 	733168346	Game_Start			\Default Work Unit\UI+UX\Game_Start	
+	1136628163	NewTestEvent			\Default Work Unit\UI+UX\NewTestEvent	
 	1490295179	AkE_TestEvent			\Default Work Unit\AkE_TestEvent	
 	2089142865	AkE_ScannerBeep			\Default Work Unit\Objects\AkE_ScannerBeep	
 	2621440863	AkE_EnemyAttack			\Default Work Unit\Enemies\AkE_EnemyAttack	
