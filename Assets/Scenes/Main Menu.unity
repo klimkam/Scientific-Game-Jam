@@ -691,7 +691,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -736,7 +736,7 @@ MonoBehaviour:
   UI_Game_Start:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 2b7dc20fdac094c6793ef1d51abedad8, type: 2}
 --- !u!1001 &1401839810
 PrefabInstance:
   m_ObjectHideFlags: 0

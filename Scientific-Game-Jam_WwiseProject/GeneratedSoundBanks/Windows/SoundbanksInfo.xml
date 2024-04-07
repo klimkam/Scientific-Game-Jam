@@ -9,10 +9,13 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{26461B70-E092-F2BD-5A14-107AC4D8EF6C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B1EBD74A-D9F6-BAAA-14A4-4A413D81ED69}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<Custom>
+					<Plugin Id="405230599" Name="RoomVerb (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</Custom>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
@@ -24,7 +27,13 @@
 				<Bus Id="4149107498" Name="MICROPHONE_BUS"/>
 			</Busses>
 			<AuxBusses>
-				<AuxBus Id="327594346" Name="AuxVerb"/>
+				<AuxBus Id="327594346" Name="AuxVerb">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="405230599"/>
+						</Custom>
+					</PluginRefs>
+				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="1493153371" Name="PlayerSpeed"/>
@@ -32,7 +41,7 @@
 				<GameParameter Id="3617146325" Name="MicrophoneLevel"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{DF98575F-7457-D81C-E98C-37D202A792B0}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{70545D78-5E4A-036A-FDF5-E1C5D4804004}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -203,6 +212,7 @@
 						<ActionPostEventEntry Id="2959533290" Name="Play_AMB"/>
 					</ActionPostEvent>
 				</Event>
+				<Event Id="1136628163" Name="NewTestEvent" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2959533290" Name="Play_AMB" MaxAttenuation="30" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="5060706"/>
@@ -240,5 +250,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2C2B4F68-2434-22C5-5FC7-40BE1EF84E45}</FileHash>
+	<FileHash>{33E9B41E-844D-A3C7-52EE-10D0E4A93686}</FileHash>
 </SoundBanksInfo>

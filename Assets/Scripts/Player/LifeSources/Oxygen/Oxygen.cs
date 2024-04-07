@@ -45,4 +45,8 @@ public class Oxygen : MonoBehaviour
     private void Suffocate() {
         SceneManager.LoadScene("Game Over Scene");
     }
+
+    public void HowCanWeBreatheWithNoAir() {
+        OxygenCurrentLevel = m_oxygenMaxLevel;
+    }
 }

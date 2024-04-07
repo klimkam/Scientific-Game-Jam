@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID AKE_SCANNERBEEP = 2089142865U;
         static const AkUniqueID AKE_TESTEVENT = 1490295179U;
         static const AkUniqueID GAME_START = 733168346U;
+        static const AkUniqueID NEWTESTEVENT = 1136628163U;
         static const AkUniqueID PLAY_AMB = 2959533290U;
     } // namespace EVENTS
 
