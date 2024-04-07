@@ -25,6 +25,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID MICROPHONELEVEL = 3617146325U;
         static const AkUniqueID PLAYERDEPTH = 1755200717U;
         static const AkUniqueID PLAYERSPEED = 1493153371U;
     } // namespace GAME_PARAMETERS
@@ -38,6 +39,7 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MICROPHONE_BUS = 4149107498U;
         static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 
