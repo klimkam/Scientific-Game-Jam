@@ -19,7 +19,7 @@ public class DeepLevel : MonoBehaviour
             return;
         }
 
-        if (m_playerDepth > m_minimalDepthLevel)
+        if (m_playerDepth > m_maxDepthLevel)
         {
             Debug.LogWarning(100);
             AkSoundEngine.SetRTPCValue("PlayerDepth", 100, gameObject);
