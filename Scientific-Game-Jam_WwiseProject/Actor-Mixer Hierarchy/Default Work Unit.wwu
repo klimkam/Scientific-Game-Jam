@@ -66,6 +66,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<BlendContainer Name="OceanAMB" ID="{4030A87F-1E93-4780-9140-9808852D686A}" ShortID="95589017">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
@@ -2903,12 +2910,22 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="SX_RadarBeepMONO" ID="{BD18053E-91F3-4AC6-ABC0-B6E0F4C8564C}" ShortID="475031084">
+									<PropertyList>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="AuxVerb" ID="{AABD9E38-B3ED-4058-B3F8-7E256BEE8CB6}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2940,6 +2957,221 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<BlendContainer Name="Start" ID="{092D7021-98AD-4314-B003-2C20BB79CB24}" ShortID="82591776">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="ESM_Holigraphic_UI_Sounds_20_Glitch_Software_Particle_Processed_Beep_Chrip_Electronic" ID="{F0509C27-ACDD-4102-9C5A-8DC64790A3AC}" ShortID="851868524">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-19</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ESM_Holigraphic_UI_Sounds_20_Glitch_Software_Particle_Processed_Beep_Chrip_Electronic" ID="{41350E65-047C-4324-BAD0-A9DFFE686E8B}">
+													<Language>SFX</Language>
+													<AudioFile>ESM_Holigraphic_UI_Sounds_20_Glitch_Software_Particle_Processed_Beep_Chrip_Electronic.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="966859893"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ESM_Holigraphic_UI_Sounds_20_Glitch_Software_Particle_Processed_Beep_Chrip_Electronic" ID="{41350E65-047C-4324-BAD0-A9DFFE686E8B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="LIQUID_bubbles_large_06" ID="{AA5E83CB-4E79-4B07-A4CB-9908C94DE2A3}" ShortID="924487857">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="LIQUID_bubbles_large_06" ID="{91456FD2-BBF6-4E6B-A881-75EC8AE30358}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.737381527734268"/>
+														<Property Name="FadeOutShape" Type="int16" Value="1"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.01264284272303"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>LIQUID_bubbles_large_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="179881601"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="LIQUID_bubbles_large_06" ID="{91456FD2-BBF6-4E6B-A881-75EC8AE30358}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Snow Impact and Debris - Snowball Hit 04" ID="{257F161A-B8B3-43F1-A3CF-BD9955D61947}" ShortID="320193789">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Snow Impact and Debris - Snowball Hit 04" ID="{BBED266C-B1BF-49AC-8633-C4D350A6A28D}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.234589682539682"/>
+														<Property Name="FadeInShape" Type="int16" Value="7"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.148074338624339"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Snow Impact and Debris - Snowball Hit 04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="129192204"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Snow Impact and Debris - Snowball Hit 04" ID="{BBED266C-B1BF-49AC-8633-C4D350A6A28D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="splash big 10" ID="{9845C9CE-D08D-44E0-AF76-570077E10276}" ShortID="164545355">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="splash big 10" ID="{BAE8FED7-92C0-4F85-9DA1-0E3B08AE1F6A}">
+													<Language>SFX</Language>
+													<AudioFile>splash big 10.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="25007526"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="splash big 10" ID="{BAE8FED7-92C0-4F85-9DA1-0E3B08AE1F6A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ESM_Holigraphic_UI_Sounds_27_Glitch_Software_Particle_Processed_Beep_Chrip_Electronic" ID="{446E9D80-459E-4337-922E-5A2EC7510363}" ShortID="707744218">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ESM_Holigraphic_UI_Sounds_27_Glitch_Software_Particle_Processed_Beep_Chrip_Electronic" ID="{F58B8E08-2855-46E0-BA90-4C94A719FD82}">
+													<Language>SFX</Language>
+													<AudioFile>ESM_Holigraphic_UI_Sounds_27_Glitch_Software_Particle_Processed_Beep_Chrip_Electronic.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="974696044"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ESM_Holigraphic_UI_Sounds_27_Glitch_Software_Particle_Processed_Beep_Chrip_Electronic" ID="{F58B8E08-2855-46E0-BA90-4C94A719FD82}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+								<Sound Name="SX_GameStartSplash" ID="{02956DE0-0131-4078-BB6E-AB3A7E03536F}" ShortID="339693167">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>11</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SX_GameStartSplash" ID="{99434817-9AA1-4363-A870-4680283DAF3F}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.190387539142641"/>
+												<Property Name="FadeInShape" Type="int16" Value="7"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SX_GameStartSplash.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="477405019"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SX_GameStartSplash" ID="{99434817-9AA1-4363-A870-4680283DAF3F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="PLAYER" ID="{E32D1DF1-C1BE-4D56-924B-D58F7EEE89FA}" ShortID="196768957">
 							<PropertyList>
@@ -3177,6 +3409,56 @@
 											</Reference>
 										</ReferenceList>
 									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</ActorMixer>
+				<ActorMixer Name="MICROPHONE" ID="{A3A91789-F561-409C-9CE9-DABDD6BEC606}" ShortID="564400553">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="MICROPHONE_BUS" ID="{14FD9BF1-8CF7-46C7-9E54-2D11FECC3307}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="MicrophoneInput" ID="{FA0AF16D-FA02-4EC3-8786-DEA851ED65D9}" ShortID="216278526">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Audio Input" ID="{A5296D6A-E9D8-4334-B0C1-DD17BDB50AB7}" ShortID="341181921" PluginName="Wwise Audio Input" CompanyID="0" PluginID="200">
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Audio Input" ID="{A5296D6A-E9D8-4334-B0C1-DD17BDB50AB7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{B7DD49EA-AF2C-4D01-8D09-1449F8CD9A96}" ShortID="728982720">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+												<ObjectRef Name="MicMeter" ID="{297B9474-B781-4652-9EAF-4EB113D7A53E}" WorkUnitID="{422F15B5-08AB-4B77-9307-BC24BD1A5F1E}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{6E5F2058-9485-4252-82C4-6EAEE744BCA6}" ShortID="396624056"/>
 								</Local>
 							</Reference>
 						</ObjectList>
