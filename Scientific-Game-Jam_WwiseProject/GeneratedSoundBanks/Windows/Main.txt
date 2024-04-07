@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	573290449	AkE_PlayerMove			\Default Work Unit\PlayerActions\AkE_PlayerMove	
 	690181958	AkE_EnemyGrowl			\Default Work Unit\Enemies\AkE_EnemyGrowl	
 	733168346	Game_Start			\Default Work Unit\UI+UX\Game_Start	
+	1136628163	NewTestEvent			\Default Work Unit\UI+UX\NewTestEvent	
 	1490295179	AkE_TestEvent			\Default Work Unit\AkE_TestEvent	
 	2089142865	AkE_ScannerBeep			\Default Work Unit\Objects\AkE_ScannerBeep	
 	2621440863	AkE_EnemyAttack			\Default Work Unit\Enemies\AkE_EnemyAttack	
@@ -10,13 +11,41 @@ Event	ID	Name			Wwise Object Path	Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1493153371	PlayerSpeed			\Default Work Unit\PlayerSpeed	
+	1755200717	PlayerDepth			\Default Work Unit\PlayerDepth	
 
 Effect plug-ins	ID	Name	Type				Notes
+	811968549	Gain (Custom)	Wwise Gain			
 	858666023	Pitch Shifter (Custom)	Wwise Pitch Shifter			
+	1954284521	MicMeter	Wwise Meter			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	341181921	Audio Input	Wwise Audio Input		\Actor-Mixer Hierarchy\Default Work Unit\MICROPHONE\MicrophoneInput\Audio Input	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	5060706	AMBDrone	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\AMBDrone_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanDrone\AMBDrone		7761696
+	10778220	Bowed Metals_FX_16	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\Bowed Metals_FX_16_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Cymbals\Bowed Metals_FX_16		5920888
+	19639481	Bowed Metals_FX_17	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\Bowed Metals_FX_17_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Cymbals\Bowed Metals_FX_17		8715956
+	131477098	SX_LOWGROWLAMB-008	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\SX_LOWGROWLAMB-008_96FED982.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Growls\SX_LOWGROWLAMB-008		2545560
+	157989543	SX_LOWGROWLAMB-001	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\SX_LOWGROWLAMB-001_06E57381.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Growls\SX_LOWGROWLAMB-001		1964616
+	181900161	SX_LOWGROWLAMB-005	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\SX_LOWGROWLAMB-005_C595FFCE.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Growls\SX_LOWGROWLAMB-005		3249816
 	317261131	SX_RadarBeepMONO	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\SX_RadarBeepMONO_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\OBJECTS\SX_RadarBeepMONO		617496
+	403455851	Bowed Metals_FX_14	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\Bowed Metals_FX_14_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Cymbals\Bowed Metals_FX_14		5422092
+	459685041	SX_OceanAMBLayer2	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\SX_OceanAMBLayer2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanDrone\SX_OceanAMBLayer2		30340896
+	466981827	Bowed Metals_FX_10	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\Bowed Metals_FX_10_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Cymbals\Bowed Metals_FX_10		4866264
+	477405019	SX_GameStartSplash	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\SX_GameStartSplash_FD354991.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI+UX\SX_GameStartSplash		641252
+	526258960	SX_LOWGROWLAMB-009	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\SX_LOWGROWLAMB-009_E07000F3.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Growls\SX_LOWGROWLAMB-009		3158016
 	545753517	SX_GliderJet(Bubbles)	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\SX_GliderJet(Bubbles)_66B93D96.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PLAYER\SX_GliderLoop\SX_GliderJet(Bubbles)		5380296
+	564187307	SX_LOWGROWLAMB-002	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\SX_LOWGROWLAMB-002_508A6574.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Growls\SX_LOWGROWLAMB-002		2106816
+	589382019	Bowed Metals_FX_12	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\Bowed Metals_FX_12_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Cymbals\Bowed Metals_FX_12		6413932
 	614078952	TEST_Audio	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\TEST_Audio_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\TEST_Audio		155744
+	670247480	SX_LOWGROWLAMB-006	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\SX_LOWGROWLAMB-006_A30B87C6.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Growls\SX_LOWGROWLAMB-006		2089896
 	688291734	SX_GliderJet(Jet)	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\SX_GliderJet(Jet)_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PLAYER\SX_GliderLoop\SX_GliderJet(Jet)		5380296
+	736059846	Bowed Metals_FX_11	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\Bowed Metals_FX_11_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Cymbals\Bowed Metals_FX_11		6407456
+	747402839	SX_LOWGROWLAMB-004	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\SX_LOWGROWLAMB-004_337184B6.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Growls\SX_LOWGROWLAMB-004		3079896
+	811562710	Bowed Metals_FX_13	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\Bowed Metals_FX_13_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Cymbals\Bowed Metals_FX_13		4524152
+	881706534	SX_LOWGROWLAMB-003	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\SX_LOWGROWLAMB-003_7C270536.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Growls\SX_LOWGROWLAMB-003		2236776
+	890728779	Bowed Metals_FX_18	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\Bowed Metals_FX_18_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Cymbals\Bowed Metals_FX_18		5786388
+	913779242	SX_LOWGROWLAMB-007	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\SX_LOWGROWLAMB-007_95104919.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Growls\SX_LOWGROWLAMB-007		3079896
+	1060915629	SX_LOWGROWLAMB-010	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\SX_LOWGROWLAMB-010_8AFAE04D.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Growls\SX_LOWGROWLAMB-010		3298256
+	1069511858	Bowed Metals_FX_15	C:\Users\embur\Documents\Game Development\Game Jams\ScientificGameJam2024\Scientific-Game-Jam\Scientific-Game-Jam_WwiseProject\.cache\Windows\SFX\Bowed Metals_FX_15_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\OceanAMB\OceanOtherStuff\Level3\Stingers\Cymbals\Bowed Metals_FX_15		3147624
 

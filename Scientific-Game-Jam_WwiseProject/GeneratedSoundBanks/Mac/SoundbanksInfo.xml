@@ -9,10 +9,13 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3EE57589-86F6-F716-C9FF-C3F4ED33AF13}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D834DE09-C68A-115E-58D0-C5084C1184E8}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<Custom>
+					<Plugin Id="405230599" Name="RoomVerb (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</Custom>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
@@ -21,45 +24,146 @@
 			<Busses>
 				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="4149107498" Name="MICROPHONE_BUS"/>
 			</Busses>
 			<AuxBusses>
-				<AuxBus Id="327594346" Name="AuxVerb"/>
+				<AuxBus Id="327594346" Name="AuxVerb">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="405230599"/>
+						</Custom>
+					</PluginRefs>
+				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="1493153371" Name="PlayerSpeed"/>
 				<GameParameter Id="1755200717" Name="PlayerDepth"/>
+				<GameParameter Id="3617146325" Name="MicrophoneLevel"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C531B9AF-2BBE-37FD-A4B7-AC13B5229544}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{70545D78-5E4A-036A-FDF5-E1C5D4804004}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="5060706" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMBDrone.wav</ShortName>
+					<CachePath>SFX/AMBDrone_818F3B66.wem</CachePath>
+				</File>
+				<File Id="10778220" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bowed Metals_FX_16.wav</ShortName>
+					<CachePath>SFX/Bowed Metals_FX_16_818F3B66.wem</CachePath>
+				</File>
+				<File Id="19639481" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bowed Metals_FX_17.wav</ShortName>
+					<CachePath>SFX/Bowed Metals_FX_17_818F3B66.wem</CachePath>
+				</File>
+				<File Id="131477098" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SX_LOWGROWLAMB-008.wav</ShortName>
+					<CachePath>SFX/SX_LOWGROWLAMB-008_96FED982.wem</CachePath>
+				</File>
+				<File Id="157989543" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SX_LOWGROWLAMB-001.wav</ShortName>
+					<CachePath>SFX/SX_LOWGROWLAMB-001_06E57381.wem</CachePath>
+				</File>
+				<File Id="181900161" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SX_LOWGROWLAMB-005.wav</ShortName>
+					<CachePath>SFX/SX_LOWGROWLAMB-005_C595FFCE.wem</CachePath>
+				</File>
 				<File Id="317261131" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SX_RadarBeepMONO.wav</ShortName>
 					<CachePath>SFX/SX_RadarBeepMONO_818F3B66.wem</CachePath>
+				</File>
+				<File Id="403455851" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bowed Metals_FX_14.wav</ShortName>
+					<CachePath>SFX/Bowed Metals_FX_14_818F3B66.wem</CachePath>
+				</File>
+				<File Id="459685041" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SX_OceanAMBLayer2.wav</ShortName>
+					<CachePath>SFX/SX_OceanAMBLayer2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="466981827" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bowed Metals_FX_10.wav</ShortName>
+					<CachePath>SFX/Bowed Metals_FX_10_818F3B66.wem</CachePath>
+				</File>
+				<File Id="477405019" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SX_GameStartSplash.wav</ShortName>
+					<CachePath>SFX/SX_GameStartSplash_FD354991.wem</CachePath>
+				</File>
+				<File Id="526258960" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SX_LOWGROWLAMB-009.wav</ShortName>
+					<CachePath>SFX/SX_LOWGROWLAMB-009_E07000F3.wem</CachePath>
 				</File>
 				<File Id="545753517" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SX_GliderJet(Bubbles).wav</ShortName>
 					<CachePath>SFX/SX_GliderJet(Bubbles)_66B93D96.wem</CachePath>
 				</File>
+				<File Id="564187307" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SX_LOWGROWLAMB-002.wav</ShortName>
+					<CachePath>SFX/SX_LOWGROWLAMB-002_508A6574.wem</CachePath>
+				</File>
+				<File Id="589382019" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bowed Metals_FX_12.wav</ShortName>
+					<CachePath>SFX/Bowed Metals_FX_12_818F3B66.wem</CachePath>
+				</File>
 				<File Id="614078952" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TEST_Audio.wav</ShortName>
 					<CachePath>SFX/TEST_Audio_818F3B66.wem</CachePath>
+				</File>
+				<File Id="670247480" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SX_LOWGROWLAMB-006.wav</ShortName>
+					<CachePath>SFX/SX_LOWGROWLAMB-006_A30B87C6.wem</CachePath>
 				</File>
 				<File Id="688291734" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SX_GliderJet(Jet).wav</ShortName>
 					<CachePath>SFX/SX_GliderJet(Jet)_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="736059846" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bowed Metals_FX_11.wav</ShortName>
+					<CachePath>SFX/Bowed Metals_FX_11_818F3B66.wem</CachePath>
+				</File>
+				<File Id="747402839" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SX_LOWGROWLAMB-004.wav</ShortName>
+					<CachePath>SFX/SX_LOWGROWLAMB-004_337184B6.wem</CachePath>
+				</File>
+				<File Id="811562710" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bowed Metals_FX_13.wav</ShortName>
+					<CachePath>SFX/Bowed Metals_FX_13_818F3B66.wem</CachePath>
+				</File>
+				<File Id="881706534" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SX_LOWGROWLAMB-003.wav</ShortName>
+					<CachePath>SFX/SX_LOWGROWLAMB-003_7C270536.wem</CachePath>
+				</File>
+				<File Id="890728779" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bowed Metals_FX_18.wav</ShortName>
+					<CachePath>SFX/Bowed Metals_FX_18_818F3B66.wem</CachePath>
+				</File>
+				<File Id="913779242" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SX_LOWGROWLAMB-007.wav</ShortName>
+					<CachePath>SFX/SX_LOWGROWLAMB-007_95104919.wem</CachePath>
+				</File>
+				<File Id="1060915629" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SX_LOWGROWLAMB-010.wav</ShortName>
+					<CachePath>SFX/SX_LOWGROWLAMB-010_8AFAE04D.wem</CachePath>
+				</File>
+				<File Id="1069511858" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bowed Metals_FX_15.wav</ShortName>
+					<CachePath>SFX/Bowed Metals_FX_15_818F3B66.wem</CachePath>
+				</File>
 			</Media>
 			<Plugins>
 				<Custom>
+					<Plugin Id="341181921" Name="Audio Input" LibName="Wwise Audio Input" LibId="13107202"/>
+					<Plugin Id="811968549" Name="Gain (Custom)" LibName="Wwise Gain" LibId="9109507"/>
 					<Plugin Id="858666023" Name="Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 				</Custom>
+				<ShareSets>
+					<Plugin Id="1954284521" Name="MicMeter" LibName="Wwise Meter" LibId="8454147"/>
+				</ShareSets>
 			</Plugins>
 			<Events>
 				<Event Id="2621440863" Name="AkE_EnemyAttack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="690181958" Name="AkE_EnemyGrowl" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="573290449" Name="AkE_PlayerMove" DurationType="Infinite">
+				<Event Id="573290449" Name="AkE_PlayerMove" MaxAttenuation="30" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="545753517"/>
 						<MediaRef Id="688291734"/>
@@ -71,23 +175,80 @@
 					</PluginRefs>
 				</Event>
 				<Event Id="3494097962" Name="AkE_PlayerStop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2089142865" Name="AkE_ScannerBeep" MaxAttenuation="100" DurationType="OneShot" DurationMin="3.5" DurationMax="3.5">
+				<Event Id="2089142865" Name="AkE_ScannerBeep" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.5" DurationMax="3.5">
 					<MediaRefs>
 						<MediaRef Id="317261131"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="811968549"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
-				<Event Id="1490295179" Name="AkE_TestEvent" DurationType="OneShot" DurationMin="0.88235825" DurationMax="0.88235825">
+				<Event Id="1490295179" Name="AkE_TestEvent" MaxAttenuation="30" DurationType="OneShot" DurationMin="0.88235825" DurationMax="0.88235825">
 					<MediaRefs>
 						<MediaRef Id="614078952"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="811968549"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
-				<Event Id="733168346" Name="Game_Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2959533290" Name="Play_AMB" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="733168346" Name="Game_Start" DurationType="Unknown">
+					<MediaRefs>
+						<MediaRef Id="477405019"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="341181921"/>
+							<PluginRef Id="811968549"/>
+						</Custom>
+						<ShareSets>
+							<PluginRef Id="1954284521"/>
+						</ShareSets>
+					</PluginRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="2959533290" Name="Play_AMB"/>
+					</ActionPostEvent>
+				</Event>
+				<Event Id="1136628163" Name="NewTestEvent" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2959533290" Name="Play_AMB" MaxAttenuation="30" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="5060706"/>
+						<MediaRef Id="10778220"/>
+						<MediaRef Id="19639481"/>
+						<MediaRef Id="131477098"/>
+						<MediaRef Id="157989543"/>
+						<MediaRef Id="181900161"/>
+						<MediaRef Id="403455851"/>
+						<MediaRef Id="459685041"/>
+						<MediaRef Id="466981827"/>
+						<MediaRef Id="526258960"/>
+						<MediaRef Id="564187307"/>
+						<MediaRef Id="589382019"/>
+						<MediaRef Id="670247480"/>
+						<MediaRef Id="736059846"/>
+						<MediaRef Id="747402839"/>
+						<MediaRef Id="811562710"/>
+						<MediaRef Id="881706534"/>
+						<MediaRef Id="890728779"/>
+						<MediaRef Id="913779242"/>
+						<MediaRef Id="1060915629"/>
+						<MediaRef Id="1069511858"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="811968549"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="1493153371" Name="PlayerSpeed"/>
+				<GameParameter Id="1755200717" Name="PlayerDepth"/>
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0786B00B-F914-088E-B6DA-C9E2B995E3E4}</FileHash>
+	<FileHash>{0618A067-C90A-4D74-6E63-49F9938DD750}</FileHash>
 </SoundBanksInfo>
