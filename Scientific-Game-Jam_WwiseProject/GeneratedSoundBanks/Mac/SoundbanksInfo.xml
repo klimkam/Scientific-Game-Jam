@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D326F752-7CA2-0A14-FDB1-63ECE89D0199}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{CE80CC32-F917-C3F2-2C8E-ED568D1C7553}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -19,26 +19,72 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="327594346" Name="AuxVerb"/>
+			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="1493153371" Name="PlayerSpeed"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5CF75216-DA2C-0A03-F9B5-58DF4F895F0E}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4D6F747F-B9C9-3DE4-31C8-78836B169384}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="317261131" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SX_RadarBeepMONO.wav</ShortName>
+					<CachePath>SFX/SX_RadarBeepMONO_818F3B66.wem</CachePath>
+				</File>
+				<File Id="545753517" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SX_GliderJet(Bubbles).wav</ShortName>
+					<CachePath>SFX/SX_GliderJet(Bubbles)_66B93D96.wem</CachePath>
+				</File>
 				<File Id="614078952" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TEST_Audio.wav</ShortName>
 					<CachePath>SFX/TEST_Audio_818F3B66.wem</CachePath>
 				</File>
+				<File Id="688291734" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SX_GliderJet(Jet).wav</ShortName>
+					<CachePath>SFX/SX_GliderJet(Jet)_FBC78EF0.wem</CachePath>
+				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="858666023" Name="Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+				</Custom>
+			</Plugins>
 			<Events>
+				<Event Id="2621440863" Name="AkE_EnemyAttack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="690181958" Name="AkE_EnemyGrowl" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="573290449" Name="AkE_PlayerMove" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="545753517"/>
+						<MediaRef Id="688291734"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="858666023"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="3494097962" Name="AkE_PlayerStop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2089142865" Name="AkE_ScannerBeep" MaxAttenuation="100" DurationType="OneShot" DurationMin="3.5" DurationMax="3.5">
+					<MediaRefs>
+						<MediaRef Id="317261131"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1490295179" Name="AkE_TestEvent" DurationType="OneShot" DurationMin="0.88235825" DurationMax="0.88235825">
 					<MediaRefs>
 						<MediaRef Id="614078952"/>
 					</MediaRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="1493153371" Name="PlayerSpeed"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{380818E6-E59F-F9E6-727C-7C511AE94D10}</FileHash>
+	<FileHash>{6BC74616-7B0E-29D9-AEAA-DB7D906E6B36}</FileHash>
 </SoundBanksInfo>

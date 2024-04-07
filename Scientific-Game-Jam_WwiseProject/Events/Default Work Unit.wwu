@@ -14,6 +14,66 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="PlayerActions" ID="{CFA18AC4-8C62-4251-A0B1-AF2B0BABED39}" ShortID="63291167">
+					<ChildrenList>
+						<Event Name="AkE_PlayerMove" ID="{8C62846D-4224-423D-A303-A1C3DC047CA4}">
+							<ChildrenList>
+								<Action Name="" ID="{348A6CC9-2F26-447E-8840-715B0A6ED233}" ShortID="166980983">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SX_GliderLoop" ID="{1B4B9E36-D357-4A4D-8835-F15EF92D867E}" WorkUnitID="{4FEA21A5-32A9-4280-AAEC-9F50BEEDD9D4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="AkE_PlayerStop" ID="{0D65F674-5C5B-4AA7-981F-EF315D492E0D}">
+							<ChildrenList>
+								<Action Name="" ID="{84FE5BA5-F24D-4F7A-87E1-FE1B30B321A4}" ShortID="669965662">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SX_GliderLoop" ID="{1B4B9E36-D357-4A4D-8835-F15EF92D867E}" WorkUnitID="{4FEA21A5-32A9-4280-AAEC-9F50BEEDD9D4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Objects" ID="{5D80AD3E-E3E6-4ECD-9913-6811D1364928}" ShortID="18500562">
+					<ChildrenList>
+						<Event Name="AkE_ScannerBeep" ID="{F716A73A-93A6-453A-A5C8-AE6759C1FCA0}">
+							<ChildrenList>
+								<Action Name="" ID="{0135DE09-CA30-4DFF-8C12-CE432D08363F}" ShortID="424567477">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SX_RadarBeepMONO" ID="{BD18053E-91F3-4AC6-ABC0-B6E0F4C8564C}" WorkUnitID="{4FEA21A5-32A9-4280-AAEC-9F50BEEDD9D4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemies" ID="{02C93A37-15DA-462E-BD1A-BD1E0F04F741}" ShortID="238796738">
+					<ChildrenList>
+						<Event Name="AkE_EnemyGrowl" ID="{9AF071D0-14CB-40C2-AF28-3ACE82887B8A}"/>
+						<Event Name="AkE_EnemyAttack" ID="{0F178ED0-B6C5-4941-8EDE-BA09110A81B2}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI+UX" ID="{C41209AC-8EFF-442E-A704-2D49F612CB15}" ShortID="989070044">
+					<ChildrenList>
+						<Event Name="Game_Start" ID="{C89476C2-BE22-487A-A0BB-C51236A0F967}"/>
+						<Event Name="Play_AMB" ID="{47136A0C-A7E5-4791-8861-9E099057B178}"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
