@@ -6,6 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
     private float m_speed = 20;
+    [SerializeField]
+    Camera m_camera;
+
     private Vector3 m_motion;
     private Rigidbody m_rb;
 
@@ -21,7 +24,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        m_motion = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Jump"), Input.GetAxisRaw("Vertical")) ;
+        m_motion = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Jump"), Input.GetAxisRaw("Vertical"));
+        m_motion = m_camera.transform.rotation * m_motion;
         m_rb.velocity = m_motion * m_speed;
         
     }
