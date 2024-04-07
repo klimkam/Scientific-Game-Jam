@@ -19,10 +19,13 @@ namespace AK
         static const AkUniqueID AKE_PLAYERSTOP = 3494097962U;
         static const AkUniqueID AKE_SCANNERBEEP = 2089142865U;
         static const AkUniqueID AKE_TESTEVENT = 1490295179U;
+        static const AkUniqueID GAME_START = 733168346U;
+        static const AkUniqueID PLAY_AMB = 2959533290U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID PLAYERDEPTH = 1755200717U;
         static const AkUniqueID PLAYERSPEED = 1493153371U;
     } // namespace GAME_PARAMETERS
 
