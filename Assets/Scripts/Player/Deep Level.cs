@@ -25,6 +25,7 @@ public class DeepLevel : MonoBehaviour
         }
 
             m_playerDepth = m_playerDepth / m_maxDepthLevel * 100;
+        Debug.Log(m_playerDepth);
             AkSoundEngine.SetRTPCValue("PlayerDepth", m_playerDepth, gameObject);
     }
 }
