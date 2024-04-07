@@ -1,5 +1,6 @@
 ﻿#if !UNITY_WEBGL
 using UnityEngine.Events;
+using UnityEngine;
 [UnityEngine.RequireComponent(typeof(UnityEngine.AudioSource))]
 public class AkMicrophone : UnityEngine.MonoBehaviour
 {
@@ -92,8 +93,11 @@ public class AkMicrophone : UnityEngine.MonoBehaviour
 		{
 			int RTPCValue = (int)AkQueryRTPCValue.RTPCValue_GameObject;
 			AkSoundEngine.GetRTPCValue((uint)MicrophoneLevelRTPC.Id, gameObject, m_PlayingID, out currentMicLevel, ref RTPCValue);
-			if (IsAboveThreshold)
+			if (IsAboveThreshold) {
 				OnMicrophoneAction.Invoke();
+				Debug.Log("Mic Event!");
+			}
+				
 		}
 	}
 

@@ -63,6 +63,7 @@ public class Oxygen : MonoBehaviour
     }
 
     public void HowCanWeBreatheWithNoAir() {
+        Debug.Log("How Can we breathe with no air");
         OxygenCurrentLevel = m_oxygenMaxLevel;
     }
 }
