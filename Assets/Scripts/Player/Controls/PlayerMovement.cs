@@ -33,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
         m_motion = m_camera.transform.rotation * m_motion;
         m_rb.velocity = m_motion * m_speed;
 
+        AkSoundEngine.SetRTPCValue("PlayerSpeed", (m_rb.velocity.magnitude / 20) * 100, gameObject);
+
         if (m_rb.velocity.magnitude > 0.01f)
         {
             if (!hasFiredMoving)
