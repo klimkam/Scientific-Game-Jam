@@ -61,6 +61,720 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<BlendContainer Name="OceanAmb" ID="{20B59D3E-0D62-4988-8C19-7C73ED0F7B16}" ShortID="985547203">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<BlendContainer Name="Level1" ID="{346B4BC7-1247-4E83-A384-344711B8CFC7}" ShortID="381485272">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+												</Reference>
+											</ReferenceList>
+										</BlendContainer>
+										<BlendContainer Name="Level2" ID="{7EF7459D-09DB-4074-B3E3-F05B67F81432}" ShortID="545660600">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+												</Reference>
+											</ReferenceList>
+										</BlendContainer>
+										<BlendContainer Name="Level3" ID="{B79880A2-7593-46E8-8AE2-2A892326CA0E}" ShortID="569246327">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="Growls" ID="{3216DA96-56E7-4E32-8EE7-1ED14C3FCE73}" ShortID="610952944">
+													<PropertyList>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="Lowpass" Type="int16">
+															<ValueList>
+																<Value>11</Value>
+															</ValueList>
+														</Property>
+														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+														<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="5">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{585454D5-9302-4536-BE1F-34D6EBC35C5A}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="3"/>
+																			<Property Name="Min" Type="Real64" Value="-2"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+														<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<Custom>
+																<Attenuation Name="Attenuation (Custom)" ID="{B897B14F-1485-4160-BCF4-CDCF922D82F2}" ShortID="365321611">
+																	<CurveUsageInfoList>
+																		<VolumeDryUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																				<Curve Name="VolumeDry" ID="{D1BEA929-AA9B-42F5-B970-2D48022540BA}">
+																					<PropertyList>
+																						<Property Name="Flags" Type="int32" Value="3"/>
+																					</PropertyList>
+																					<PointList>
+																						<Point>
+																							<XPos>0</XPos>
+																							<YPos>0</YPos>
+																							<Flags>5</Flags>
+																						</Point>
+																						<Point>
+																							<XPos>100</XPos>
+																							<YPos>-200</YPos>
+																							<Flags>37</Flags>
+																						</Point>
+																					</PointList>
+																				</Curve>
+																			</CurveUsageInfo>
+																		</VolumeDryUsage>
+																		<VolumeWetGameUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																		</VolumeWetGameUsage>
+																		<VolumeWetUserUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																		</VolumeWetUserUsage>
+																		<LowPassFilterUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</LowPassFilterUsage>
+																		<HighPassFilterUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</HighPassFilterUsage>
+																		<SpreadUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</SpreadUsage>
+																		<FocusUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																		</FocusUsage>
+																		<ObstructionVolumeUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																		</ObstructionVolumeUsage>
+																		<ObstructionLPFUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																		</ObstructionLPFUsage>
+																		<ObstructionHPFUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																		</ObstructionHPFUsage>
+																		<OcclusionVolumeUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																		</OcclusionVolumeUsage>
+																		<OcclusionLPFUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																		</OcclusionLPFUsage>
+																		<OcclusionHPFUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																		</OcclusionHPFUsage>
+																		<DiffractionVolumeUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																		</DiffractionVolumeUsage>
+																		<DiffractionLPFUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																		</DiffractionLPFUsage>
+																		<DiffractionHPFUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																		</DiffractionHPFUsage>
+																		<TransmissionVolumeUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																		</TransmissionVolumeUsage>
+																		<TransmissionLPFUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																		</TransmissionLPFUsage>
+																		<TransmissionHPFUsage>
+																			<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																		</TransmissionHPFUsage>
+																	</CurveUsageInfoList>
+																</Attenuation>
+															</Custom>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="SX_LOWGROWLAMB-001" ID="{B862A523-B5DE-431A-B098-6CCCE64C74FE}" ShortID="270257325">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>12</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SX_LOWGROWLAMB-001" ID="{CB13F2F7-C3EB-4E6B-9CB9-A7239FB84F1A}">
+																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="6.55102040816326"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="2.18367346938776"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="24.4571428571428"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SX_LOWGROWLAMB-001.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="157989543"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SX_LOWGROWLAMB-001" ID="{CB13F2F7-C3EB-4E6B-9CB9-A7239FB84F1A}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SX_LOWGROWLAMB-002" ID="{85BE0B7C-255C-4639-A666-E44BA0AFA760}" ShortID="595197967">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>12</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Weight" Type="Real64">
+																	<ValueList>
+																		<Value>67</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SX_LOWGROWLAMB-002" ID="{B8149700-6E06-41AD-B1EB-CA1344AF61EA}">
+																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="6.51428571428571"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="6.51428571428571"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="30.3999999999999"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SX_LOWGROWLAMB-002.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="564187307"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SX_LOWGROWLAMB-002" ID="{B8149700-6E06-41AD-B1EB-CA1344AF61EA}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SX_LOWGROWLAMB-003" ID="{914C735E-2998-48D8-A01B-31C8C9AEAF32}" ShortID="401620470">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>12</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SX_LOWGROWLAMB-003" ID="{0E4849C4-31BD-4E36-B930-A952187D7053}">
+																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="7.56326530612245"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="4.00408163265306"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="29.3632653061224"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SX_LOWGROWLAMB-003.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="881706534"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SX_LOWGROWLAMB-003" ID="{0E4849C4-31BD-4E36-B930-A952187D7053}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SX_LOWGROWLAMB-004" ID="{EF9CF1C4-C227-41F5-B11C-05192A1738D7}" ShortID="57206366">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>12</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SX_LOWGROWLAMB-004" ID="{F9D49F64-CE66-4201-B6FB-0B27F4C26FAA}">
+																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="8.87755102040817"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="23.0816326530612"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="57.9999999999999"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SX_LOWGROWLAMB-004.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="747402839"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SX_LOWGROWLAMB-004" ID="{F9D49F64-CE66-4201-B6FB-0B27F4C26FAA}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SX_LOWGROWLAMB-005" ID="{2CFF944F-3DE6-4197-90AE-388D5428E5C7}" ShortID="714392431">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>12</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SX_LOWGROWLAMB-005" ID="{AC905990-61E9-424B-A07B-68983EB0393D}">
+																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="15.1714285714286"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="13.7265306122449"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="50.5714285714286"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SX_LOWGROWLAMB-005.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="181900161"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SX_LOWGROWLAMB-005" ID="{AC905990-61E9-424B-A07B-68983EB0393D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SX_LOWGROWLAMB-006" ID="{7C97259D-4D2D-49F6-8327-127DD2C2E8DD}" ShortID="540073468">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>12</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SX_LOWGROWLAMB-006" ID="{536AE2C2-2AC5-4D6D-9044-8FE4AA139416}">
+																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="5.26530612244898"/>
+																		<Property Name="LoopBegin" Type="Real64" Value="6.31836734693877"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="5.79183673469387"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="29.4857142857143"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SX_LOWGROWLAMB-006.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="670247480"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SX_LOWGROWLAMB-006" ID="{536AE2C2-2AC5-4D6D-9044-8FE4AA139416}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SX_LOWGROWLAMB-007" ID="{0A076DBF-E73A-4298-BEDB-7E13D4374581}" ShortID="1032244597">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>12</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SX_LOWGROWLAMB-007" ID="{1F42D679-EA05-4CD1-BD02-DBC152B42118}">
+																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="11.8367346938776"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="14.7959183673469"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="49.7142857142857"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SX_LOWGROWLAMB-007.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="913779242"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SX_LOWGROWLAMB-007" ID="{1F42D679-EA05-4CD1-BD02-DBC152B42118}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SX_LOWGROWLAMB-008" ID="{BE9D991D-81FF-490D-9E33-797952E6A6CF}" ShortID="446182533">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>12</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SX_LOWGROWLAMB-008" ID="{94C3C5BD-95D1-481C-8495-C007730EDB32}">
+																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="8.28571428571428"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="33.2827148150326"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="62.1428571428571"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SX_LOWGROWLAMB-008.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="131477098"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SX_LOWGROWLAMB-008" ID="{94C3C5BD-95D1-481C-8495-C007730EDB32}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SX_LOWGROWLAMB-009" ID="{ECCA7A0C-4967-4F94-8C09-73CDB640D3EC}" ShortID="883079174">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>12</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SX_LOWGROWLAMB-009" ID="{44D01500-A2CE-4544-A04C-CF3730786008}">
+																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="10.530612244898"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="15.7959183673469"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="51.6"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SX_LOWGROWLAMB-009.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="526258960"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SX_LOWGROWLAMB-009" ID="{44D01500-A2CE-4544-A04C-CF3730786008}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SX_LOWGROWLAMB-010" ID="{41CD4E93-B04B-4B5D-90DB-4E25AEE1F972}" ShortID="308032366">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>12</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="SFX" ID="{98EE93DF-8D25-4E5D-9649-1479A0189463}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SX_LOWGROWLAMB-010" ID="{B01C01AC-59A3-4B09-B0A2-B9FB8825F0EB}">
+																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="7.91028941644685"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="53.933791475774"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="91.3278868989773"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SX_LOWGROWLAMB-010.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1060915629"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SX_LOWGROWLAMB-010" ID="{B01C01AC-59A3-4B09-B0A2-B9FB8825F0EB}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<PositioningInfo>
+														<Position Name="" ID="{A4DC9554-A5E2-462D-9856-48D95766EC45}">
+															<PropertyList>
+																<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+																<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+															</PropertyList>
+															<ChildrenList>
+																<Path2D Name="Growls_Path" ID="{9EC7EE31-4CBD-4ECD-856A-20B15FD8B714}">
+																	<PointList>
+																		<Point>
+																			<XPos>-58.94737</XPos>
+																			<YPos>64.71103</YPos>
+																			<Flags>12</Flags>
+																			<Time>0</Time>
+																		</Point>
+																		<Point>
+																			<XPos>42.10526</XPos>
+																			<YPos>40.45534</YPos>
+																			<Flags>0</Flags>
+																			<Time>2500</Time>
+																		</Point>
+																		<Point>
+																			<XPos>68.4210526315789</XPos>
+																			<YPos>-25.0437828371278</YPos>
+																			<Flags>0</Flags>
+																			<Time>5000</Time>
+																		</Point>
+																	</PointList>
+																</Path2D>
+																<Path2D Name="Growls_Path_01" ID="{5139FCCC-7E16-4E50-92C0-3F64E434D2DD}">
+																	<PointList>
+																		<Point>
+																			<XPos>-78.59649</XPos>
+																			<YPos>85.02627</YPos>
+																			<Flags>12</Flags>
+																			<Time>0</Time>
+																		</Point>
+																	</PointList>
+																</Path2D>
+																<Path2D Name="Growls_Path_02" ID="{6BDD0F1D-6ED5-4171-9E67-EBE6A74F9DCD}">
+																	<PointList>
+																		<Point>
+																			<XPos>87.01754</XPos>
+																			<YPos>81.17338</YPos>
+																			<Flags>12</Flags>
+																			<Time>0</Time>
+																		</Point>
+																	</PointList>
+																</Path2D>
+																<Path2D Name="Growls_Path_03" ID="{A4CCFF84-5AEF-4BB4-A9FF-1B5C0CCF4FC3}">
+																	<PointList>
+																		<Point>
+																			<XPos>-80</XPos>
+																			<YPos>-88.0035</YPos>
+																			<Flags>12</Flags>
+																			<Time>0</Time>
+																		</Point>
+																	</PointList>
+																</Path2D>
+																<Path2D Name="Growls_Path_04" ID="{47FD9AA2-2527-4CEA-8D2E-299C81C1FD3C}">
+																	<PointList>
+																		<Point>
+																			<XPos>76.49123</XPos>
+																			<YPos>-85.55166</YPos>
+																			<Flags>12</Flags>
+																			<Time>0</Time>
+																		</Point>
+																	</PointList>
+																</Path2D>
+																<Path2D Name="Growls_Path_05" ID="{39DC57A2-C79A-4E56-BFF0-CB5958350EB5}">
+																	<PointList>
+																		<Point>
+																			<XPos>-74.03508</XPos>
+																			<YPos>-82.3993</YPos>
+																			<Flags>12</Flags>
+																			<Time>0</Time>
+																		</Point>
+																		<Point>
+																			<XPos>51.57895</XPos>
+																			<YPos>-95.09632</YPos>
+																			<Flags>0</Flags>
+																			<Time>2500</Time>
+																		</Point>
+																		<Point>
+																			<XPos>85.26316</XPos>
+																			<YPos>-16.98774</YPos>
+																			<Flags>0</Flags>
+																			<Time>5000</Time>
+																		</Point>
+																	</PointList>
+																</Path2D>
+																<Path2D Name="Growls_Path_06" ID="{3E92901E-4E49-472F-B8DA-3F68AFFDB498}">
+																	<PointList>
+																		<Point>
+																			<XPos>-96.49123</XPos>
+																			<YPos>29.3345</YPos>
+																			<Flags>12</Flags>
+																			<Time>0</Time>
+																		</Point>
+																		<Point>
+																			<XPos>-73.68421</XPos>
+																			<YPos>84.23818</YPos>
+																			<Flags>0</Flags>
+																			<Time>5000</Time>
+																		</Point>
+																	</PointList>
+																</Path2D>
+																<Path2D Name="Growls_Path_07" ID="{4639C7E6-7FFA-4EF7-BF7E-EA82703483B4}">
+																	<PointList>
+																		<Point>
+																			<XPos>48.77193</XPos>
+																			<YPos>-96.76007</YPos>
+																			<Flags>12</Flags>
+																			<Time>0</Time>
+																		</Point>
+																		<Point>
+																			<XPos>87.01754</XPos>
+																			<YPos>-51.31349</YPos>
+																			<Flags>0</Flags>
+																			<Time>5000</Time>
+																		</Point>
+																	</PointList>
+																</Path2D>
+															</ChildrenList>
+														</Position>
+													</PositioningInfo>
+												</RandomSequenceContainer>
+											</ChildrenList>
+										</BlendContainer>
+										<Sound Name="AMBDrone" ID="{CAFD322C-0942-4AB3-884E-742C61A981F2}" ShortID="829056762">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{09E2D4C9-6FE8-40E3-8873-0131A6861F08}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AMBDrone" ID="{69AB8D25-ABBC-41B6-9B3B-D19A430BBE69}">
+													<Language>SFX</Language>
+													<AudioFile>AMBDrone.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="5060706"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AMBDrone" ID="{69AB8D25-ABBC-41B6-9B3B-D19A430BBE69}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<BlendTrackList>
+										<BlendTrack Name="EnvironmentFade" ID="{84B61640-D017-4FCE-8263-DEA940250C83}" ShortID="225461570">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="PlayerDepth" ID="{E2221916-5F0F-44EB-BDD7-B568226560C3}" WorkUnitID="{F54A8AF3-C696-4D61-B966-006C423561FC}"/>
+												</Reference>
+											</ReferenceList>
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="Level1" ID="{346B4BC7-1247-4E83-A384-344711B8CFC7}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>0</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>32.8454382845188</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="Level2" ID="{7EF7459D-09DB-4074-B3E3-F05B67F81432}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>28.9123838912134</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>65.021170502092</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="Level3" ID="{B79880A2-7593-46E8-8AE2-2A892326CA0E}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>62.489914748954</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>100</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+									</BlendTrackList>
+								</BlendContainer>
+							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="OBJECTS" ID="{8DB66731-DD45-4D2D-982D-99918853C6E7}" ShortID="269338161">
 							<PropertyList>
