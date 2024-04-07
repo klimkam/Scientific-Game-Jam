@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.38496125, g: 0.60092664, b: 0.63618654, a: 1}
+  m_IndirectSpecularColor: {r: 0.38496128, g: 0.6009269, b: 0.6361861, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1820,6 +1820,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_minimalDepthLevel: 0
   m_maxDepthLevel: 250
+--- !u!114 &364214913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364214903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a696abe83d4b84888b82263596ed7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AudioSource: {fileID: 0}
+  m_minScale: {x: 0, y: 0, z: 0}
+  m_maxScale: {x: 0, y: 0, z: 0}
 --- !u!1 &368121413
 GameObject:
   m_ObjectHideFlags: 0
@@ -8541,6 +8556,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4950099533666045169, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 364214912}
+    - targetCorrespondingSourceObject: {fileID: 4950099533666045169, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 364214913}
   m_SourcePrefab: {fileID: 100100000, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
 --- !u!20 &1701082951 stripped
 Camera:

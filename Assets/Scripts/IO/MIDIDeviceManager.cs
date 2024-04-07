@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Layouts;
 using UnityEngine.Events;
+using System;
 
 // NoteCallback.cs - This script shows how to define a callback to get notified
 // on MIDI note-on/off events.
@@ -30,6 +31,8 @@ sealed class MIDIDeviceManager : MonoBehaviour
     // private bool activeNote = false;
 
     MIDIAverageEvent m_MIDIAverageEvent;
+
+    public static Action<float> OnMIDIInputChange;
 
     void Start()
     {
@@ -85,6 +88,7 @@ sealed class MIDIDeviceManager : MonoBehaviour
         {
             movingAverage = movingAverage + (noteValue - movingAverage) / (MovingAverageLength + 1);
             Debug.Log("Moving Average: " + movingAverage); // event here
+            OnMIDIInputChange.Invoke(movingAverage);
         }
         else
         {
@@ -94,7 +98,8 @@ sealed class MIDIDeviceManager : MonoBehaviour
             if (count == MovingAverageLength)
             {
                 movingAverage = movingAverage / count;
-                // Debug.Log("Moving Average: " + movingAverage);
+                Debug.Log("Moving Average: " + movingAverage);
+                OnMIDIInputChange.Invoke(movingAverage);
             }
         }
 
