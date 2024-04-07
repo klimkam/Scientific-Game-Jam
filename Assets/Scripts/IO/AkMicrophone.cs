@@ -3,14 +3,14 @@ using UnityEngine.Events;
 [UnityEngine.RequireComponent(typeof(UnityEngine.AudioSource))]
 public class AkMicrophone : UnityEngine.MonoBehaviour
 {
-    public AK.Wwise.Event MicrophoneEvent;
-    public AK.Wwise.RTPC MicrophoneLevelRTPC;
-    public int SampleRate = 48000;
-    public int InitialReadDelayInSamples = 4096;
-    [UnityEngine.Header("Invoked on exceeding -48dB")]
-    public UnityEvent OnMicrophoneAction;
+	public AK.Wwise.Event MicrophoneEvent;
+	public AK.Wwise.RTPC MicrophoneLevelRTPC;
+	public int SampleRate = 48000;
+	public int InitialReadDelayInSamples = 4096;
+	[UnityEngine.Header("Invoked on exceeding -48dB")]
+	public UnityEvent OnMicrophoneAction;
 
-    public static AkMicrophone Instance
+	public static AkMicrophone Instance
 	{
 		get;
 		private set;
@@ -26,32 +26,32 @@ public class AkMicrophone : UnityEngine.MonoBehaviour
 		}
 	}
 
-    // Buffering consts
-    private const int NUMBER_OF_CHANNELS = 1;
+	// Buffering consts
+	private const int NUMBER_OF_CHANNELS = 1;
 	private const int BUFFER_SIZE_IN_SECONDS = 2;
 	private int BufferSizeInSamples { get { return BUFFER_SIZE_IN_SECONDS * NUMBER_OF_CHANNELS * SampleRate; } }
 
 	// Level monitoring
 	private float ATTACK_LEVEL_THRESHOLD = -24.0f;
 	private float currentMicLevel = -48;
-	
+
 	// Unity Microphone input handling
-    private UnityEngine.AudioSource MicrophoneSource;
-    private int ReadPosition = 0;
+	private UnityEngine.AudioSource MicrophoneSource;
+	private int ReadPosition = 0;
 	private bool IsPlaying { get { return m_PlayingID != AkSoundEngine.AK_INVALID_PLAYING_ID; } }
 	private float[] SamplesBuffer = null;
 	private object BufferLock = new object();
 
 	private uint m_PlayingID = AkSoundEngine.AK_INVALID_PLAYING_ID;
 
-    void AudioFormatDelegate(uint playingID, AkAudioFormat audioFormat)
-    {
-        audioFormat.channelConfig.uNumChannels = NUMBER_OF_CHANNELS;
-        audioFormat.uSampleRate = (uint)SampleRate;
-    }
+	void AudioFormatDelegate(uint playingID, AkAudioFormat audioFormat)
+	{
+		audioFormat.channelConfig.uNumChannels = NUMBER_OF_CHANNELS;
+		audioFormat.uSampleRate = (uint)SampleRate;
+	}
 
 	bool AudioSamplesDelegate(uint playingID, uint channelIndex, float[] samples)
-    {
+	{
 		if (IsPlaying)
 		{
 			try
@@ -71,7 +71,7 @@ public class AkMicrophone : UnityEngine.MonoBehaviour
 
 		// Return false to indicate that there is no more data to provide. This will also stop the associated event.
 		return IsPlaying;
-    }
+	}
 
 	void GetMicrophoneSamples()
 	{
@@ -85,16 +85,16 @@ public class AkMicrophone : UnityEngine.MonoBehaviour
 	}
 
 	void FixedUpdate()
-    {
+	{
 		GetMicrophoneSamples();
 
-        if (IsPlaying)
-        {
-            int RTPCValue = (int)AkQueryRTPCValue.RTPCValue_GameObject;
-            AkSoundEngine.GetRTPCValue((uint)MicrophoneLevelRTPC.Id, gameObject, m_PlayingID, out currentMicLevel, ref RTPCValue);
-            if (IsAboveThreshold)
-                OnMicrophoneAction.Invoke();
-        }
+		if (IsPlaying)
+		{
+			int RTPCValue = (int)AkQueryRTPCValue.RTPCValue_GameObject;
+			AkSoundEngine.GetRTPCValue((uint)MicrophoneLevelRTPC.Id, gameObject, m_PlayingID, out currentMicLevel, ref RTPCValue);
+			if (IsAboveThreshold)
+				OnMicrophoneAction.Invoke();
+		}
 	}
 
 	void Start()
@@ -126,14 +126,14 @@ public class AkMicrophone : UnityEngine.MonoBehaviour
 		}
 	}
 	public void StopSound()
-    {
+	{
 		m_PlayingID = AkSoundEngine.AK_INVALID_PLAYING_ID;
 		MicrophoneEvent.Stop(gameObject);
 	}
 
-    private void OnDestroy()
-    {
+	private void OnDestroy()
+	{
 		StopSound();
-    }
+	}
 }
 #endif

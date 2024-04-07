@@ -5155,7 +5155,7 @@ MonoBehaviour:
   MicrophoneLevelRTPC:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: c9fac62cd3b5346f5819d1dfd4fbed29, type: 2}
   SampleRate: 48000
   InitialReadDelayInSamples: 4096
   OnMicrophoneAction:
