@@ -68,6 +68,12 @@
 						<Event Name="AkE_EnemyAttack" ID="{0F178ED0-B6C5-4941-8EDE-BA09110A81B2}"/>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="UI+UX" ID="{C41209AC-8EFF-442E-A704-2D49F612CB15}" ShortID="989070044">
+					<ChildrenList>
+						<Event Name="Game_Start" ID="{C89476C2-BE22-487A-A0BB-C51236A0F967}"/>
+						<Event Name="Play_AMB" ID="{47136A0C-A7E5-4791-8861-9E099057B178}"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
