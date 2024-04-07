@@ -4423,11 +4423,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e329fbcc3b44a4af4a62decef09e6a6e, type: 3}
   m_PrefabInstance: {fileID: 812230037}
   m_PrefabAsset: {fileID: 0}
---- !u!20 &846390958 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 56495328551576713, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
-  m_PrefabInstance: {fileID: 1701082950}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &847338298
 PrefabInstance:
   m_ObjectHideFlags: 0
