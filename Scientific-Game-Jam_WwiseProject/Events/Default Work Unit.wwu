@@ -71,18 +71,50 @@
 				</Folder>
 				<Folder Name="UI+UX" ID="{C41209AC-8EFF-442E-A704-2D49F612CB15}" ShortID="989070044">
 					<ChildrenList>
-						<Event Name="Game_Start" ID="{C89476C2-BE22-487A-A0BB-C51236A0F967}"/>
-						<Event Name="Play_AMB" ID="{47136A0C-A7E5-4791-8861-9E099057B178}">
+						<Event Name="Game_Start" ID="{C89476C2-BE22-487A-A0BB-C51236A0F967}">
 							<ChildrenList>
-								<Action Name="" ID="{6973B853-44E9-4C00-A3CE-2D3443397A6C}" ShortID="481149878">
+								<Action Name="" ID="{224775BC-88F5-424B-AAA5-54716745074F}" ShortID="99466413">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="OceanOtherStuff" ID="{20B59D3E-0D62-4988-8C19-7C73ED0F7B16}" WorkUnitID="{4FEA21A5-32A9-4280-AAEC-9F50BEEDD9D4}"/>
+											<ObjectRef Name="SX_GameStartSplash" ID="{02956DE0-0131-4078-BB6E-AB3A7E03536F}" WorkUnitID="{4FEA21A5-32A9-4280-AAEC-9F50BEEDD9D4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{32229644-6CBD-4B0D-8B79-82767CDE3590}" ShortID="130484786">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Play_AMB" ID="{47136A0C-A7E5-4791-8861-9E099057B178}" WorkUnitID="{D8CDC2C6-D1AB-4534-BAF8-D301F9014B7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{57440CB5-ECB2-46A7-8DB4-43F5A2EE7AFD}" ShortID="1039606712">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MicrophoneInput" ID="{FA0AF16D-FA02-4EC3-8786-DEA851ED65D9}" WorkUnitID="{4FEA21A5-32A9-4280-AAEC-9F50BEEDD9D4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_AMB" ID="{47136A0C-A7E5-4791-8861-9E099057B178}">
+							<ChildrenList>
+								<Action Name="" ID="{6D876706-E03E-46FD-8D89-78F6BAC25535}" ShortID="182927761">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="OceanAMB" ID="{4030A87F-1E93-4780-9140-9808852D686A}" WorkUnitID="{4FEA21A5-32A9-4280-AAEC-9F50BEEDD9D4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="NewTestEvent" ID="{A704B68A-BD4A-4A08-9380-08670BFCDA12}"/>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
