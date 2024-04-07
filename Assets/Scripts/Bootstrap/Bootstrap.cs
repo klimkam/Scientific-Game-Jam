@@ -7,7 +7,6 @@ public class Bootstrap : MonoBehaviour
 {
     private void Awake()
     {
-        Cursor.visible = false;
         SceneManager.LoadScene("Main Menu");
     }
 }
