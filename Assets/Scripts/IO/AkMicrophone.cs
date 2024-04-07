@@ -1,5 +1,6 @@
 ﻿#if !UNITY_WEBGL
 using UnityEngine.Events;
+using UnityEngine;
 [UnityEngine.RequireComponent(typeof(UnityEngine.AudioSource))]
 public class AkMicrophone : UnityEngine.MonoBehaviour
 {
