@@ -1,0 +1,2569 @@
+fileFormatVersion: 2
+guid: 75c71bf48d37a404f917a36324e6a76b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 18
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Oxygene Tube_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 323
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8b636d28cc105459636c09c3be9804
+      internalID: 1543989036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 323
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5eb6cc29c829d47a09cade15036303
+      internalID: -1188436323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 323
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e12dd1e2878354896d76e3992cc261
+      internalID: -293644225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 323
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c80faabcfcd224eb58256e687d1c63
+      internalID: -628502639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_4
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 323
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd77fa694a2a14e4dbea4825a66174ba
+      internalID: -540961762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_5
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 323
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31574d96d0b6f640bf6dc09242a2a7e
+      internalID: -2074480989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_6
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 323
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c300a8818d484cd4abb648566ccd5c39
+      internalID: 694480288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_7
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 323
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b0e5afca206c64badc24bd94e81b41
+      internalID: -501697211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_8
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 323
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b45e0f41228403143bad6219518cadea
+      internalID: -601051033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_9
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 323
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05581e1b85727a34c978160d315d117a
+      internalID: -1355510857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_10
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 323
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c02bd410e577543a9409ac8831a23d
+      internalID: -1825012132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_11
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 291
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c449edbe9ff36347ad08b141f831fe7
+      internalID: -1165674079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_12
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 291
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457881c3d07fc2e4ba33a1d392a0cb6e
+      internalID: -1863508177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_13
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 291
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89c98321059024418dcc8e8576d49fc
+      internalID: -1390052553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_14
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 291
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b2505c8d5e09e49841d0415afef5a1
+      internalID: -362935981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_15
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 291
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec101f6f33b72f54cb3a361d05ee4109
+      internalID: -1333602231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_16
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 291
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d23c5e8a9f89114c82ad9be7db17e3f
+      internalID: 566534421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_17
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 291
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1c03e505175e24ca7c1c4f66bd09af
+      internalID: 2059397815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_18
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 291
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc2dbb4de7b2624ba44cba50e45372b
+      internalID: 220606241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_19
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 291
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd12fc0e2a798b4ebf8873a8762efdc
+      internalID: -647380207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_20
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 291
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972edeeb4f61a0d468736504bb18dc16
+      internalID: -1628798620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_21
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 291
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c050ebb92149b824b81cea2ebb44b389
+      internalID: -2086295646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_22
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 259
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b44effab57f9e4686d7b63c34a2ee2
+      internalID: -1214246681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_23
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 259
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec488aeb0ef90441bd334a8443bf29a
+      internalID: 1354235991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_24
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 259
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12dd7dbaac61f034db5969e15600305a
+      internalID: 1692891307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_25
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 259
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0caff41e44a463541871e28253da63c8
+      internalID: 425743620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_26
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 259
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c1dac688c335de42bd85b63991c9363
+      internalID: 62210611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_27
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 259
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048bfac0f14aeb14c8ed3fc97a23e52b
+      internalID: -1010678924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_28
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 259
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ceb22afce4c27746b27eddd3195fd06
+      internalID: 1789314127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_29
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 259
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2680131ded43a9d4f8e10b5815f5049c
+      internalID: 486513230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_30
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 259
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e89de8370279794a8ef3a848641f1a7
+      internalID: 477746794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_31
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 259
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3bde0f9e62b25488e955db81f47f6e
+      internalID: 347669403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_32
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 259
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828b3a12adbac484796dceaf5bd7da04
+      internalID: 95861548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_33
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 227
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61aa745979249ac4abb394b7b6f97eb9
+      internalID: 1038817640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_34
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 227
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7889f99078f6ded4392fe1feb79510cd
+      internalID: -269632440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_35
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 227
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3cbe0d87a80144ca0609d41ce5da0f
+      internalID: -632228140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_36
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 227
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8176c048b0e8e1344bd79432786114d3
+      internalID: 1829216832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_37
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 227
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce1540d656967fa4f9b8a71a898a10a6
+      internalID: -1653510774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_38
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 227
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2221e5860c421647970a7819477340f
+      internalID: 1745276877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_39
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 227
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4932604e7437e974c8f4a2364073dcef
+      internalID: 545838443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_40
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 227
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3b3d7f49939b64cad38585fe09d592
+      internalID: 595838769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_41
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 227
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911dcb75ec0f2b94383f8de9d78c0e46
+      internalID: 1444425825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_42
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 227
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06fa0a80c92ea2e469120057446ed3ec
+      internalID: 1008002134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_43
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 227
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328c9a5ecc928d243939ec04e282835c
+      internalID: -672939966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_44
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 195
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 006e84c2d7b6e174bb1b4dee38a40915
+      internalID: -986635143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_45
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 195
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b498e6c6c17584d42bcd49464577d39d
+      internalID: 1422511765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_46
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 195
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb408b1a059ffd4f8709d32890ab215
+      internalID: 729883227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_47
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 195
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b580ff5c195a10e4fbb4167ced7be32a
+      internalID: 2081716395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_48
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 195
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce861c90b273ee42ad278d3fa57a73d
+      internalID: 434276998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_49
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 195
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2257d399bbe8cb49830b69d6bf7a91b
+      internalID: -1458578072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_50
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 195
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbf184bd7b589f4eab2fe59eaae243a
+      internalID: 1762305319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_51
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 195
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae14ec14f2b04c48b301c5d7978efe7
+      internalID: 880089903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_52
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 195
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6a1225eae3d5f4f9178b0fecde1d33
+      internalID: 794269746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_53
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 195
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c895cffe043a944c8a5b67b2b5f238b
+      internalID: -735683145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_54
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 195
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2887ebb4ec09394d96049f88e92da56
+      internalID: 1396395948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_55
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 163
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c776875f0400c46830a22c205232c2
+      internalID: -202956582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_56
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 163
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5735ac62a238a54ba1889c2e50e1daa
+      internalID: 1549992532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_57
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 163
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7997a54a62cc8e64f84f3448bdb4dc63
+      internalID: 1635454901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_58
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 163
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc33f6a505f046429fd9203a979bf30
+      internalID: -1251080315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_59
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 163
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e432f07674939fb4087ed4b3d977b9b7
+      internalID: 60691652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_60
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 163
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c02ebe61f895a27498e6902507c35ac9
+      internalID: 716748182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_61
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 163
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153d9190fb35e584685e3c354df27101
+      internalID: -1952812840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_62
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 163
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed7f39b415aa134fbdefd42b4516e7d
+      internalID: 850709167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_63
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 163
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dfae8e97ee34354b85ce8c426177f4d
+      internalID: -846551234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_64
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 163
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c335ef1be7464fc41a0d6a9e4c089cfa
+      internalID: -1200548565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_65
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 163
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75b96294ee8b844e9ec1246167c9f0b
+      internalID: 672344940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_66
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 131
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ed48dd7ba79b848a2b1bf0c3ebca6e
+      internalID: -931359502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_67
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 131
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7276332a18bb5694aa52306ffd62c0af
+      internalID: 805990887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_68
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 131
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9afeacfd61adb45878926ba7273233
+      internalID: -1565095287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_69
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 131
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c05e19e3b8bfd4eac2939de602d7ed
+      internalID: -963011114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_70
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 131
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfacfcd477653294ca8e8f72a02f494b
+      internalID: 1229050040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_71
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 131
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4adc8afc00828ed42b0c99dc7a0e8002
+      internalID: -366305575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_72
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 131
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b96fe1590869e41a6ad094d55fe362
+      internalID: -1550594128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_73
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 131
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db6fe5b626d06749b5e91ecd4dc0302
+      internalID: 1463499225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_74
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 131
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b345065da1ac2d24fbca5774b4ea6dd6
+      internalID: -781265459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_75
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 131
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deca13895f81b094ba0c7c9a34352496
+      internalID: 1656308344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_76
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 131
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e838ff4e44c4cc142b229cc38b8b6ee2
+      internalID: 748466080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_77
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 99
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f43f99475d25548b525afe3f6fdec4
+      internalID: -1464884526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_78
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 99
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574015dd722ad264db1bd80dff2905e3
+      internalID: -683043848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_79
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 99
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09659a2c81a30d84c8103b4895f178f9
+      internalID: 508467597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_80
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 99
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1dbf386b0fc904eb1a18dd646c4d2f
+      internalID: -391008704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_81
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 99
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c5fc8089ea8a94499c928540e9cfef
+      internalID: 1598614225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_82
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 99
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef634c51aa562e44951faf18f0177c1
+      internalID: -2042437997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_83
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 99
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4521a1c6319445b4eaafa3603fe95c55
+      internalID: 206568178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_84
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 99
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f720692a4d4bdd42a3307fde65ac6ad
+      internalID: -155617730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_85
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 99
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad93f1de33cb344c878ef20c1055f72
+      internalID: 901917508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_86
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 99
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53a7b6ff1eca604b84ef423a497354c
+      internalID: 2010705660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_87
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 99
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e63038a38b7374da081c038aedbf73
+      internalID: 1465287199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_88
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 67
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 080ac449298a3a64b84c33d988e5b28d
+      internalID: -1765885467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_89
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 67
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b40ad7982791d74d904514fea29cfcd
+      internalID: -1093421956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_90
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 67
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7081a5ed12df56a4dbcaf5f3f2089a7a
+      internalID: 216918380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_91
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 67
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24e99135b1c7164d927e8fa492d945c
+      internalID: 1817875593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_92
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 67
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7de1553a5f81ca42a6e6f47d183e9ca
+      internalID: 1418879743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_93
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 67
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e407ff7b65b5b40850e85bf64194e3
+      internalID: -1344451461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_94
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 67
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9167f77a21e9345b62459283c2977f
+      internalID: -1623960400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_95
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 67
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444bc0f3e50a9014684efb2c886ee91d
+      internalID: 550761180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_96
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 67
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b870349af7989d4f9ae815d51476ed0
+      internalID: 2044219401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_97
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 67
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7faafac9348c6bd4ea6df929e71df1e4
+      internalID: -173006288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_98
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 67
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df5acaa22ee593498b94ea94f41cab4
+      internalID: 194509688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_99
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 35
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08dbae7388be32f46b046d7d932a03ef
+      internalID: -1383126401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_100
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 35
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7797394fe6caa54eb2aef5f87088ad3
+      internalID: -1161303176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_101
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 35
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db19684333e99614bbc4b4afbb99fbed
+      internalID: -1424178178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_102
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 35
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0054b4114e7ee468071427f2e1bad4
+      internalID: -1954464028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_103
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 35
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a48c374efc29f44ad2028d3b40c97c
+      internalID: 1798893871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_104
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 35
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0323d47a4c1a84782e1bab0a2a2152
+      internalID: -913021570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_105
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 35
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c9bff1dd4c2ae429afc515de68aa2c
+      internalID: 2125106554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_106
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 35
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44a4caac2571564aa70834e6646344c
+      internalID: 782209711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_107
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 35
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba58a15ae05a6548940c5789eaf3845
+      internalID: -1384464534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_108
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 35
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c685add2f4093d3439d1c4e8d0804b99
+      internalID: -17954887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_109
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 35
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db61540bfb5fff94e8c8b8bde9813b48
+      internalID: -358552834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oxygene Tube_110
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 3
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3e7540667b7d94b9ee01c796f4aaa0
+      internalID: -1441812428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e894eb4499fac6049ade194a31808ea8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Oxygene Tube_0: 1543989036
+      Oxygene Tube_1: -1188436323
+      Oxygene Tube_10: -1825012132
+      Oxygene Tube_100: -1161303176
+      Oxygene Tube_101: -1424178178
+      Oxygene Tube_102: -1954464028
+      Oxygene Tube_103: 1798893871
+      Oxygene Tube_104: -913021570
+      Oxygene Tube_105: 2125106554
+      Oxygene Tube_106: 782209711
+      Oxygene Tube_107: -1384464534
+      Oxygene Tube_108: -17954887
+      Oxygene Tube_109: -358552834
+      Oxygene Tube_11: -1165674079
+      Oxygene Tube_110: -1441812428
+      Oxygene Tube_12: -1863508177
+      Oxygene Tube_13: -1390052553
+      Oxygene Tube_14: -362935981
+      Oxygene Tube_15: -1333602231
+      Oxygene Tube_16: 566534421
+      Oxygene Tube_17: 2059397815
+      Oxygene Tube_18: 220606241
+      Oxygene Tube_19: -647380207
+      Oxygene Tube_2: -293644225
+      Oxygene Tube_20: -1628798620
+      Oxygene Tube_21: -2086295646
+      Oxygene Tube_22: -1214246681
+      Oxygene Tube_23: 1354235991
+      Oxygene Tube_24: 1692891307
+      Oxygene Tube_25: 425743620
+      Oxygene Tube_26: 62210611
+      Oxygene Tube_27: -1010678924
+      Oxygene Tube_28: 1789314127
+      Oxygene Tube_29: 486513230
+      Oxygene Tube_3: -628502639
+      Oxygene Tube_30: 477746794
+      Oxygene Tube_31: 347669403
+      Oxygene Tube_32: 95861548
+      Oxygene Tube_33: 1038817640
+      Oxygene Tube_34: -269632440
+      Oxygene Tube_35: -632228140
+      Oxygene Tube_36: 1829216832
+      Oxygene Tube_37: -1653510774
+      Oxygene Tube_38: 1745276877
+      Oxygene Tube_39: 545838443
+      Oxygene Tube_4: -540961762
+      Oxygene Tube_40: 595838769
+      Oxygene Tube_41: 1444425825
+      Oxygene Tube_42: 1008002134
+      Oxygene Tube_43: -672939966
+      Oxygene Tube_44: -986635143
+      Oxygene Tube_45: 1422511765
+      Oxygene Tube_46: 729883227
+      Oxygene Tube_47: 2081716395
+      Oxygene Tube_48: 434276998
+      Oxygene Tube_49: -1458578072
+      Oxygene Tube_5: -2074480989
+      Oxygene Tube_50: 1762305319
+      Oxygene Tube_51: 880089903
+      Oxygene Tube_52: 794269746
+      Oxygene Tube_53: -735683145
+      Oxygene Tube_54: 1396395948
+      Oxygene Tube_55: -202956582
+      Oxygene Tube_56: 1549992532
+      Oxygene Tube_57: 1635454901
+      Oxygene Tube_58: -1251080315
+      Oxygene Tube_59: 60691652
+      Oxygene Tube_6: 694480288
+      Oxygene Tube_60: 716748182
+      Oxygene Tube_61: -1952812840
+      Oxygene Tube_62: 850709167
+      Oxygene Tube_63: -846551234
+      Oxygene Tube_64: -1200548565
+      Oxygene Tube_65: 672344940
+      Oxygene Tube_66: -931359502
+      Oxygene Tube_67: 805990887
+      Oxygene Tube_68: -1565095287
+      Oxygene Tube_69: -963011114
+      Oxygene Tube_7: -501697211
+      Oxygene Tube_70: 1229050040
+      Oxygene Tube_71: -366305575
+      Oxygene Tube_72: -1550594128
+      Oxygene Tube_73: 1463499225
+      Oxygene Tube_74: -781265459
+      Oxygene Tube_75: 1656308344
+      Oxygene Tube_76: 748466080
+      Oxygene Tube_77: -1464884526
+      Oxygene Tube_78: -683043848
+      Oxygene Tube_79: 508467597
+      Oxygene Tube_8: -601051033
+      Oxygene Tube_80: -391008704
+      Oxygene Tube_81: 1598614225
+      Oxygene Tube_82: -2042437997
+      Oxygene Tube_83: 206568178
+      Oxygene Tube_84: -155617730
+      Oxygene Tube_85: 901917508
+      Oxygene Tube_86: 2010705660
+      Oxygene Tube_87: 1465287199
+      Oxygene Tube_88: -1765885467
+      Oxygene Tube_89: -1093421956
+      Oxygene Tube_9: -1355510857
+      Oxygene Tube_90: 216918380
+      Oxygene Tube_91: 1817875593
+      Oxygene Tube_92: 1418879743
+      Oxygene Tube_93: -1344451461
+      Oxygene Tube_94: -1623960400
+      Oxygene Tube_95: 550761180
+      Oxygene Tube_96: 2044219401
+      Oxygene Tube_97: -173006288
+      Oxygene Tube_98: 194509688
+      Oxygene Tube_99: -1383126401
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
