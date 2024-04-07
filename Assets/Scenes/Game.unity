@@ -8500,27 +8500,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8311425743327352897, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
       propertyPath: OnMicrophoneAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8311425743327352897, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
       propertyPath: OnMicrophoneAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11500000, guid: 27f3778c45bffac45acad0520720dd0d, type: 3}
+      objectReference: {fileID: 3395673480747701291, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
     - target: {fileID: 8311425743327352897, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
       propertyPath: OnMicrophoneAction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8311425743327352897, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
       propertyPath: OnMicrophoneAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_name
+      value: HowCanWeBreatheWithNoAir
       objectReference: {fileID: 0}
     - target: {fileID: 8311425743327352897, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
       propertyPath: OnMicrophoneAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: Oxygen, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8311425743327352897, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
       propertyPath: OnMicrophoneAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: HowCanWeBreatheWithNoAir
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8311425743327352897, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
       propertyPath: OnMicrophoneAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -8529,7 +8529,7 @@ PrefabInstance:
     - target: {fileID: 8717424675780056559, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
       propertyPath: m_camera
       value: 
-      objectReference: {fileID: 846390958}
+      objectReference: {fileID: 1701082951}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8538,6 +8538,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 364214912}
   m_SourcePrefab: {fileID: 100100000, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
+--- !u!20 &1701082951 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 56495328551576713, guid: 9b424394913f0fe43823ba51e53410fb, type: 3}
+  m_PrefabInstance: {fileID: 1701082950}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1701375512
 PrefabInstance:
   m_ObjectHideFlags: 0
