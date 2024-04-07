@@ -9,6 +9,13 @@
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="PlayerDepth" ID="{E2221916-5F0F-44EB-BDD7-B568226560C3}"/>
+				<GameParameter Name="MicrophoneLevel" ID="{9EC31944-1FB2-49D8-9818-5D44E3EC1D1A}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="-48"/>
+						<Property Name="Max" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-48"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
