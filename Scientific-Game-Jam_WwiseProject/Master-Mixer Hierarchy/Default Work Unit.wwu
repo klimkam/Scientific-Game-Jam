@@ -21,17 +21,10 @@
 										<ObjectList Name="Effects">
 											<Reference>
 												<Local>
-													<EffectSlot Name="" ID="{5B654A79-B14D-44A0-BE49-D3BD958BC6C8}" ShortID="40591125">
+													<EffectSlot Name="" ID="{ABD1E28E-5D4D-4000-9901-86C0C6654F35}" ShortID="365945588">
 														<ReferenceList>
-															<Reference Name="Effect">
-																<Custom>
-																	<Effect Name="RoomVerb (Custom)" ID="{4A670C5C-51C8-424D-A60C-5EEC87BF784D}" ShortID="405230599" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-																		<PropertyList>
-																			<Property Name="ERPattern" Type="int32" Value="28"/>
-																			<Property Name="HFDamping" Type="Real32" Value="5.5"/>
-																		</PropertyList>
-																	</Effect>
-																</Custom>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Holy" ID="{CC7B8638-C670-4AD5-B3FB-331EA81037F6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 															</Reference>
 														</ReferenceList>
 													</EffectSlot>
@@ -40,6 +33,20 @@
 										</ObjectList>
 									</ObjectLists>
 								</AuxBus>
+								<Bus Name="AMB" ID="{0F1598CF-C1D0-45D1-B4F1-9347910DE003}"/>
+								<Bus Name="Movement" ID="{E3E340E5-70FD-4470-A8DB-3A8370529067}">
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="AMB" ID="{0F1598CF-C1D0-45D1-B4F1-9347910DE003}"/>
+											<DuckingParam>
+												<Volume>-6</Volume>
+												<FadeInTime>0.5</FadeInTime>
+												<FadeOutTime>0.5</FadeOutTime>
+												<FadeCurve>FadeLog2</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
+								</Bus>
 							</ChildrenList>
 						</Bus>
 						<Bus Name="MICROPHONE_BUS" ID="{14FD9BF1-8CF7-46C7-9E54-2D11FECC3307}">
@@ -51,6 +58,7 @@
 								</Property>
 							</PropertyList>
 						</Bus>
+						<Bus Name="MUSIC" ID="{06BBDD9D-59DF-47D7-9293-E6CA12EDCF15}"/>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

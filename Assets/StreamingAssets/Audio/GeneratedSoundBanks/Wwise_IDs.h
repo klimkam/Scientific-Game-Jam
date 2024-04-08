@@ -23,6 +23,8 @@ namespace AK
         static const AkUniqueID LOADMENU = 1508321720U;
         static const AkUniqueID NEWTESTEVENT = 1136628163U;
         static const AkUniqueID PLAY_AMB = 2959533290U;
+        static const AkUniqueID STOPALL = 3086540886U;
+        static const AkUniqueID STOPMUSIC = 1917263390U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
@@ -40,8 +42,11 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMB = 1117531639U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MICROPHONE_BUS = 4149107498U;
+        static const AkUniqueID MOVEMENT = 2129636626U;
+        static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 

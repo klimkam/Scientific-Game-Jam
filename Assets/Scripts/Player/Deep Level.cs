@@ -14,18 +14,18 @@ public class DeepLevel : MonoBehaviour
         float m_playerDepth = transform.localPosition.y;
         if (m_playerDepth < m_minimalDepthLevel)
         {
-            AkSoundEngine.SetRTPCValue("PlayerDepth", 0, gameObject);
+            AkSoundEngine.SetRTPCValue("PlayerDepth", 0);
             return;
         }
 
         if (m_playerDepth > m_maxDepthLevel)
         {
-            AkSoundEngine.SetRTPCValue("PlayerDepth", 100, gameObject);
+            AkSoundEngine.SetRTPCValue("PlayerDepth", 100);
             return;
         }
 
             m_playerDepth = m_playerDepth / m_maxDepthLevel * 100;
         Debug.Log(m_playerDepth);
-            AkSoundEngine.SetRTPCValue("PlayerDepth", m_playerDepth, gameObject);
+            AkSoundEngine.SetRTPCValue("PlayerDepth", m_playerDepth);
     }
 }

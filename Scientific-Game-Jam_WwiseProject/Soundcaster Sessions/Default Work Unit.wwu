@@ -6,26 +6,42 @@
 				<SoundcasterSession Name="Main" ID="{EA2940C9-0E68-4A83-8BD0-E56112F0455D}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Game_Start" ID="{C89476C2-BE22-487A-A0BB-C51236A0F967}" WorkUnitID="{D8CDC2C6-D1AB-4534-BAF8-D301F9014B7E}"/>
+							<ObjectRef Name="LoadMenu" ID="{7EE09242-7918-48BC-87A4-252296D04B2A}" WorkUnitID="{D8CDC2C6-D1AB-4534-BAF8-D301F9014B7E}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="AkE_ScannerBeep" ID="{F716A73A-93A6-453A-A5C8-AE6759C1FCA0}" WorkUnitID="{D8CDC2C6-D1AB-4534-BAF8-D301F9014B7E}"/>
-							<Position X="0" Y="1"/>
+							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="AkE_PlayerMove" ID="{8C62846D-4224-423D-A303-A1C3DC047CA4}" WorkUnitID="{D8CDC2C6-D1AB-4534-BAF8-D301F9014B7E}"/>
+							<ObjectRef Name="LoadMenu" ID="{7EE09242-7918-48BC-87A4-252296D04B2A}" WorkUnitID="{D8CDC2C6-D1AB-4534-BAF8-D301F9014B7E}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Game_Start" ID="{C89476C2-BE22-487A-A0BB-C51236A0F967}" WorkUnitID="{D8CDC2C6-D1AB-4534-BAF8-D301F9014B7E}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="AkE_PlayerStop" ID="{0D65F674-5C5B-4AA7-981F-EF315D492E0D}" WorkUnitID="{D8CDC2C6-D1AB-4534-BAF8-D301F9014B7E}"/>
+							<ObjectRef Name="StopMusic" ID="{D2524D1F-B1C3-4DFD-9244-A59892C7FFD4}" WorkUnitID="{D8CDC2C6-D1AB-4534-BAF8-D301F9014B7E}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="AkE_PlayerMove" ID="{8C62846D-4224-423D-A303-A1C3DC047CA4}" WorkUnitID="{D8CDC2C6-D1AB-4534-BAF8-D301F9014B7E}"/>
 							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="AkE_PlayerStop" ID="{0D65F674-5C5B-4AA7-981F-EF315D492E0D}" WorkUnitID="{D8CDC2C6-D1AB-4534-BAF8-D301F9014B7E}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="StopAll" ID="{AB9EBC80-075C-4C63-9C66-03559D0EC83C}" WorkUnitID="{D8CDC2C6-D1AB-4534-BAF8-D301F9014B7E}"/>
+							<Position X="3" Y="2"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="PlayerDepth" ID="{E2221916-5F0F-44EB-BDD7-B568226560C3}"/>
-							<Value>51</Value>
+							<Value>68</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>

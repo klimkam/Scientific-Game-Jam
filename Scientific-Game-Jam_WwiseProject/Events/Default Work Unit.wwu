@@ -103,6 +103,16 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{BF09869B-5A53-4954-9659-5381F9255AE7}" ShortID="763852606">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="StopMusic" ID="{D2524D1F-B1C3-4DFD-9244-A59892C7FFD4}" WorkUnitID="{D8CDC2C6-D1AB-4534-BAF8-D301F9014B7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{CAE92AC9-075A-46A1-A3D9-957E3DF8BC0A}" ShortID="338765758">
 									<PropertyList>
 										<Property Name="Delay" Type="Real64" Value="5"/>
@@ -130,6 +140,20 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{227CD000-B43B-4B0A-8420-F80A7335A3A2}" ShortID="305886727">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="11"/>
+										<Property Name="FadeInCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64" Value="-96"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MUSIC" ID="{06BBDD9D-59DF-47D7-9293-E6CA12EDCF15}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_AMB" ID="{47136A0C-A7E5-4791-8861-9E099057B178}">
@@ -150,7 +174,40 @@
 						<Event Name="NewTestEvent" ID="{A704B68A-BD4A-4A08-9380-08670BFCDA12}"/>
 						<Event Name="LoadMenu" ID="{7EE09242-7918-48BC-87A4-252296D04B2A}">
 							<ChildrenList>
+								<Action Name="" ID="{9E7BA354-89B4-4920-A492-D364FB56DA8E}" ShortID="376850948">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="11"/>
+										<Property Name="FadeInCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MUSIC" ID="{06BBDD9D-59DF-47D7-9293-E6CA12EDCF15}" WorkUnitID="{FBF1839D-C430-4402-8A16-3416F7B3ED02}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{076BCD30-5633-4F27-8F5B-615605F171C6}" ShortID="208446227">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="HildieMusicLoop" ID="{00AA55BA-048A-43BF-BA83-2BBC9DA63B3C}" WorkUnitID="{4FEA21A5-32A9-4280-AAEC-9F50BEEDD9D4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="StopMusic" ID="{D2524D1F-B1C3-4DFD-9244-A59892C7FFD4}">
+							<ChildrenList>
+								<Action Name="" ID="{D1B2810D-9F30-4365-804A-666CAD16A4D7}" ShortID="88258615">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="HildieMusicLoop" ID="{00AA55BA-048A-43BF-BA83-2BBC9DA63B3C}" WorkUnitID="{4FEA21A5-32A9-4280-AAEC-9F50BEEDD9D4}"/>
@@ -161,6 +218,16 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="StopAll" ID="{AB9EBC80-075C-4C63-9C66-03559D0EC83C}">
+					<ChildrenList>
+						<Action Name="" ID="{F44221ED-350C-4913-97A3-FD2A2B9EA047}" ShortID="86272283">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

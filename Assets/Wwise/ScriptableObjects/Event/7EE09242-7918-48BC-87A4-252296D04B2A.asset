@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0745c6fd049e724a8d85e58f71c64a2, type: 3}
+  m_Name: 7EE09242-7918-48BC-87A4-252296D04B2A
+  m_EditorClassIdentifier: 
+  objectName: LoadMenu
+  id: 1508321720
+  guid: 7EE09242-7918-48BC-87A4-252296D04B2A
